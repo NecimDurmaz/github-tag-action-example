@@ -1,15 +1,16 @@
+name: Auto.Tag
 on:
   push:
     branches:
       - main
-name: Release
 jobs:
-  release:
-    name: Release GitHub Actions
+  tag:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version:
+          - 12
     steps:
-      - uses: technote-space/release-github-actions@v6
+      - uses: phish108/autotag-action@v1.1.55
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CREATE_MAJOR_VERSION_TAG: true
-          CREATE_MINOR_VERSION_TAG: true
+          github-token: ${{ secrets.GITHUB_TOKEN}}
