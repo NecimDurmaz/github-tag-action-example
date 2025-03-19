@@ -1,3 +1,3 @@
 # github-tag-action-example
 
-123
+12
