@@ -1,8 +1,8 @@
 name: Auto.Tag
+
 on:
-  push:
-    branches:
-      - main
+  - push
+
 jobs:
   tag:
     runs-on: ubuntu-latest
