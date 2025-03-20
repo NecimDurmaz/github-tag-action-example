@@ -6,8 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prepare": "husky",
-    "release": "release-it"
+    "prepare": "husky"
   },
   "dependencies": {
     "@angular/animations": "^19.0.6",
@@ -28,25 +27,13 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
-    "@release-it/conventional-changelog": "^10.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
     "husky": "^9.1.7",
-    "release-it": "^18.1.2",
     "semantic-release": "^24.2.3",
     "typescript": "^5.6.3"
   },
   "husky": {
     "hooks": {}
-  },
-  "release-it": {
-    "$schema": "https://unpkg.com/release-it/schema/release-it.json",
-    "github": {
-      "release": true
-    },
-    "git": {
-      "commitMessage": "chore: release v${version}",
-      "tagName": "v${version}"
-    }
   }
 }
