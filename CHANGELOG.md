@@ -1,5 +1,7 @@
 # Changelog
 
+## <small>0.2.1 (2025-03-20)</small>
+
 ## 0.2.0 (2025-03-20)
 
 * feat: add placeholder text to app component template ([2255701](https://github.com/NecimDurmaz/github-tag-action-example/commit/2255701))
