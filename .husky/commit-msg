@@ -10,6 +10,7 @@ PATTERN="^(feat|fix|build|chore|ci|docs|style|refactor|perf|test)(\([\w\-]+\))?(
 # If the commit message does not match the pattern, show an error
 if [[ ! "$COMMIT_MSG" =~ $PATTERN ]]; then
     echo  "\n❌ ERROR: The commit message does not follow the Conventional Commits format!"
+    echo  "📖 Commit message-> $COMMIT_MSG"
     echo  "✅ Correct format examples:"
     echo  "   - feat: add new login feature"
     echo  "   - fix(parser): resolve parsing bug"

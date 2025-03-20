@@ -10,7 +10,6 @@ Sürüm numaraları **SemVer (Semantic Versioning)** formatında belirlenir:
 MAJOR.MINOR.PATCH
 ```
 
-
 - **MAJOR** (Ana Sürüm) → Geriye dönük uyumsuz büyük değişiklikler
 - **MINOR** (Alt Sürüm) → Yeni özellik eklemeleri (geriye uyumlu)
 - **PATCH** (Hata Düzeltmeleri) → Küçük düzeltmeler ve performans iyileştirmeleri
