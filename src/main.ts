@@ -9,7 +9,6 @@ import { environment } from "./environments/enviroments";
     <h5>
         Version: {{ version }}
         dsda123123
-      1
     </h5>
 <h6>asd</h6>
     <a
