@@ -5,7 +5,6 @@ import { environment } from "./environments/enviroments";
 @Component({
   selector: "app-root",
   template: `
-    h1123
     1
     <h1>Hello from {{ name }}! {{ versionNo }}</h1>
     <h5>
