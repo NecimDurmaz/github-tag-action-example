@@ -6,10 +6,6 @@ import { environment } from "./environments/enviroments";
   selector: "app-root",
   template: `
     <h1>Hello from {{ name }}! {{ versionNo }}</h1>
-    <h5>
-        Version: {{ version }}
-        dsda123123
-    </h5>
 <h6>asd</h6>
     <a
       target="_blank"
