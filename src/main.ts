@@ -7,7 +7,6 @@ import { environment } from "./environments/enviroments";
   template: `
     <h1>Hello from {{ name }}! {{ versionNo }}</h1>
     <h5>
-
         Version: {{ version }}
         dsda
     </h5>
