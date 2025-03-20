@@ -1,24 +1,24 @@
 #!/bin/bash
 
-# Commit mesajı dosyasını oku
+# Read the commit message file
 COMMIT_MSG_FILE="$1"
 COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
 
-# Conventional Commit formatına uygun Regex deseni
+# Regex pattern for Conventional Commit format
 PATTERN="^(feat|fix|build|chore|ci|docs|style|refactor|perf|test)(\([\w\-]+\))?(!)?: .+"
 
-# Commit mesajı regex pattern'e uymuyorsa hata ver
+# If the commit message does not match the pattern, show an error
 if [[ ! "$COMMIT_MSG" =~ $PATTERN ]]; then
-    echo  "\n❌ HATA: Commit mesajı Conventional Commits formatına uygun değil!"
-    echo  "✅ Doğru format örnekleri:"
+    echo  "\n❌ ERROR: The commit message does not follow the Conventional Commits format!"
+    echo  "✅ Correct format examples:"
     echo  "   - feat: add new login feature"
     echo  "   - fix(parser): resolve parsing bug"
     echo  "   - feat(core)!: update authentication flow"
     echo  "   - docs: update API documentation"
     echo  "   - refactor!: major refactor in database structure"
-    echo  "\n🔍 Daha fazla bilgi için: https://www.conventionalcommits.org/en/v1.0.0/"
+    echo  "\n🔍 More information: https://www.conventionalcommits.org/en/v1.0.0/"
     exit 1
 fi
 
-# Başarılı ise commit işlemi devam etsin
+# If successful, continue with the commit
 exit 0
