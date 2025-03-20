@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 (2025-03-20)
+
+* feat: remove unnecessary heading from main component template ([3ff1d22](https://github.com/NecimDurmaz/github-tag-action-example/commit/3ff1d22))
+
 ## <small>0.2.2 (2025-03-20)</small>
 
 ## <small>0.2.1 (2025-03-20)</small>
