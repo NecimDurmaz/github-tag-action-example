@@ -17,8 +17,6 @@
     "@angular/forms": "^19.0.6",
     "@angular/platform-browser": "^19.0.6",
     "@angular/router": "^19.0.6",
-    "@release-it/conventional-changelog": "^10.0.0",
-    "release-it": "^18.1.2",
     "rxjs": "^7.8.1",
     "tslib": "^2.5.0",
     "zone.js": "~0.15.0"
@@ -30,75 +28,18 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
+    "@release-it/conventional-changelog": "^10.0.0",
     "husky": "^9.1.7",
+    "release-it": "^18.1.2",
     "typescript": "^5.6.3"
   },
   "husky": {
     "hooks": {}
   },
   "release-it": {
-    "git": {
-      "commitMessage": "chore: release v${version}"
-    },
+    "$schema": "https://unpkg.com/release-it/schema/release-it.json",
     "github": {
       "release": true
-    },
-    "npm": {
-      "publish": false
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "infile": "CHANGELOG.md",
-        "preset": {
-          "name": "conventionalcommits",
-          "types": [
-            {
-              "type": "feat",
-              "section": "Features"
-            },
-            {
-              "type": "fix",
-              "section": "Bug Fixes"
-            },
-            {
-              "type": "chore",
-              "section": "Chores"
-            },
-            {
-              "type": "perf",
-              "section": "Performance Improvements"
-            },
-            {
-              "type": "revert",
-              "section": "Reverts"
-            },
-            {
-              "type": "docs",
-              "section": "Documentation"
-            },
-            {
-              "type": "style",
-              "section": "Styles"
-            },
-            {
-              "type": "refactor",
-              "section": "Code Refactoring"
-            },
-            {
-              "type": "test",
-              "section": "Tests"
-            },
-            {
-              "type": "build",
-              "section": "Build System"
-            },
-            {
-              "type": "ci",
-              "section": "Continuous Integration"
-            }
-          ]
-        }
-      }
     }
   }
 }
