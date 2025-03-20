@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { bootstrapApplication } from "@angular/platform-browser";
+import { environment } from "./environments/enviroments";
 
 @Component({
   selector: "app-root",
@@ -15,6 +16,7 @@ import { bootstrapApplication } from "@angular/platform-browser";
 })
 export class App {
   versionNo: string;
+  version = environment.version;
   name = "Angular";
   constructor() {
     this.versionNo = (window as any)?.angusVersion?.tag?.split(":")?.[1];
