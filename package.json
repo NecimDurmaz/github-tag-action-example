@@ -61,6 +61,10 @@
               "section": "Bug Fixes"
             },
             {
+                "type": "chore",
+                "section": "Chores"
+            },
+            {
               "type": "perf",
               "section": "Performance Improvements"
             },
