@@ -1,25 +1,26 @@
-#!/bin/bash
-
-# Read the commit message file
-COMMIT_MSG_FILE="$1"
-COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
-
-# Regex pattern for Conventional Commit format
-PATTERN="^(feat|fix|build|chore|ci|docs|style|refactor|perf|test)(\([\w\-]+\))?(!)?: .+"
-
-# If the commit message does not match the pattern, show an error
-if [[ ! "$COMMIT_MSG" =~ $PATTERN ]]; then
-    echo  "\n❌ ERROR: The commit message does not follow the Conventional Commits format!"
-    echo  "📖 Commit message-> $COMMIT_MSG"
-    echo  "✅ Correct format examples:"
-    echo  "   - feat: add new login feature"
-    echo  "   - fix(parser): resolve parsing bug"
-    echo  "   - feat(core)!: update authentication flow"
-    echo  "   - docs: update API documentation"
-    echo  "   - refactor!: major refactor in database structure"
-    echo  "\n🔍 More information: https://www.conventionalcommits.org/en/v1.0.0/"
-    exit 1
-fi
-
-# If successful, continue with the commit
-exit 0
+npx commitlint --edit
+##!/bin/bash
+#
+## Read the commit message file
+#COMMIT_MSG_FILE="$1"
+#COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+#
+## Regex pattern for Conventional Commit format
+#PATTERN="^(feat|fix|build|chore|ci|docs|style|refactor|perf|test)(\([\w\-]+\))?(!)?: .+"
+#
+## If the commit message does not match the pattern, show an error
+#if [[ ! "$COMMIT_MSG" =~ $PATTERN ]]; then
+#    echo  "\n❌ ERROR: The commit message does not follow the Conventional Commits format!"
+#    echo  "📖 Commit message-> $COMMIT_MSG"
+#    echo  "✅ Correct format examples:"
+#    echo  "   - feat: add new login feature"
+#    echo  "   - fix(parser): resolve parsing bug"
+#    echo  "   - feat(core)!: update authentication flow"
+#    echo  "   - docs: update API documentation"
+#    echo  "   - refactor!: major refactor in database structure"
+#    echo  "\n🔍 More information: https://www.conventionalcommits.org/en/v1.0.0/"
+#    exit 1
+#fi
+#
+## If successful, continue with the commit
+#exit 0
