@@ -1,54 +1,31 @@
-#name: Auto Tag my Application
-#on:
-#  push:
-#    branches:
-#      - main
-#jobs:
-#  Patch:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          fetch-depth: "0"
-#      - name: Minor version for each merge
-#        id: taggerDryRun
-#        uses: anothrNick/github-tag-action@1.36.0
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          WITH_V: true
-#          DRY_RUN: true
-#
-#      - name: echo new tag
-#        run: |
-#          echo "The next tag version will be: ${{ steps.taggerDryRun.outputs.new_tag }}"
-#      - name: echo tag
-#        run: |
-#          echo "The current tag is: ${{ steps.taggerDryRun.outputs.tag }}"
-#      - name: echo part
-#        run: |
-#          echo "The version increment was: ${{ steps.taggerDryRun.outputs.part }}"
-#      # DO MY BUILD HERE
-#      # IN CASE OF FAILURE, THE STEP BELOW WILL NOT RUN.
-#
-#      - name: Minor version for each merge
-#        id: taggerFinal
-#        uses: anothrNick/github-tag-action@1.36.0
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          WITH_V: true
-#          DEFAULT_BUMP: patch
-#          RELEASE_BRANCHES: main
-#      - name: Versiyonu environment.prod.ts Dosyasına Yaz
-#        run: |
-#          echo "export const environment = {" > src/environments/environment.prod.ts
-#          echo "  production: true," >> src/environments/environment.prod.ts
-#          echo "  version: '${{ steps.taggerDryRun.outputs.new_tag }}'" >> src/environments/environment.prod.ts
-#          echo "};" >> src/environments/environment.prod.ts
-#
-#      - name: Değişiklikleri Commit Et
-#        run: |
-#          git config --global user.email "actions@github.com"
-#          git config --global user.name "github-actions"
-#          git add src/environments/environment.prod.ts
-#          git commit -m "Update version to ${{ steps.taggerDryRun.outputs.new_tag }}"
-#          git push
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm run build
+      - name: Get Release Token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@v3
+        with:
+          application_id: ${{ secrets.RELEASE_APP_ID }}
+          application_private_key: ${{ secrets.RELEASE_APP_CERT }}
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ steps.get_workflow_token.outputs.token }}
