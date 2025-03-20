@@ -2,6 +2,7 @@
 
 Bu proje, commit mesajlarını kullanarak sürüm numarasını otomatik olarak artırır. GitHub Actions tarafından belirlenen kurallara göre commit mesajlarının içeriğine bağlı olarak **major, minor veya patch** seviyesinde yeni bir sürüm etiketi oluşturulur.
 
+
 ## 🚀 Sürüm Numaralandırma Kuralları
 
 Sürüm numaraları **SemVer (Semantic Versioning)** formatında belirlenir:
