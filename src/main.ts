@@ -6,7 +6,7 @@ import { environment } from "./environments/enviroments";
   selector: "app-root",
   template: `
     <h1>Hello from {{ name }}! {{ versionNo }}</h1>
-<H2>asd</H2>
+<H2>123asd</H2>
     <a
       target="_blank"
       href="https://angular.dev/overview"
