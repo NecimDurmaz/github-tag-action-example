@@ -8,6 +8,11 @@ import { environment } from "./environments/enviroments";
     h1123
     1
     <h1>Hello from {{ name }}! {{ versionNo }}</h1>
+    <h5>
+        
+        Version: {{ version }}
+        dsda
+    </h5>
     <a
       target="_blank"
       href="https://angular.dev/overview"
