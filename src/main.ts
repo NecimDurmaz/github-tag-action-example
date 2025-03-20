@@ -13,6 +13,7 @@ import { environment } from "./environments/enviroments";
         Version: {{ version }}
         dsda
     </h5>
+<h6>asd</h6>
     <a
       target="_blank"
       href="https://angular.dev/overview"
