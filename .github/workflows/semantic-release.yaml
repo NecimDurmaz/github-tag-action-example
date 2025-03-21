@@ -36,8 +36,8 @@ jobs:
             @semantic-release/changelog@6
             @semantic-release/git@10
             @semantic-release/exec@7
-        #            @semantic-release/github@10
-        #            @semantic-release/npm@10
+            @semantic-release/github@11
+            @semantic-release/npm@12
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
