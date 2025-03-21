@@ -1,3 +1,11 @@
+# [4.11.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.10.0...v4.11.0) (2025-03-21)
+
+
+### Features
+
+* add @semantic-release/github and @semantic-release/npm to configuration ([12261ff](https://github.com/NecimDurmaz/github-tag-action-example/commit/12261ff358de2a357f20b3f1be36eb8886d544ca))
+* comment out @semantic-release/github and @semantic-release/npm in configuration ([4b883c1](https://github.com/NecimDurmaz/github-tag-action-example/commit/4b883c16369de03f93ed0ca3e09833b3ca7eab74))
+
 # [4.10.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.9.0...v4.10.0) (2025-03-21)
 
 
