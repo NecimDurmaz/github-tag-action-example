@@ -1,3 +1,12 @@
+# [4.15.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.14.0...v4.15.0) (2025-03-21)
+
+
+### Features
+
+* add configuration files for semantic-release setup ([7d6e47e](https://github.com/NecimDurmaz/github-tag-action-example/commit/7d6e47ea039f906cafa25846d2f813aa42750295))
+* add GitHub Actions workflow for Semantic Release on pull requests ([8aa57b2](https://github.com/NecimDurmaz/github-tag-action-example/commit/8aa57b283d884c073fe8debec329b09d0c62cc28))
+* update default branch from master to main in configuration ([b1d50db](https://github.com/NecimDurmaz/github-tag-action-example/commit/b1d50db054a7bed3ea6ad6196a0a124993a559a9))
+
 # [4.13.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.12.0...v4.13.0) (2025-03-21)
 
 
