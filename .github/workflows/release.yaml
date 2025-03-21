@@ -26,7 +26,7 @@ jobs:
       - run: echo "LATEST_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
       # index.html dosyasındaki <!-- VERSION --> alanını güncelle
-      - run:
+      - run: |
           sed -i "s|<!-- VERSION -->|Version: $LATEST_VERSION|g" index.html
 
       # Değişiklikleri GitHub'a commit et
