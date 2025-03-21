@@ -24,15 +24,3 @@ jobs:
 
       # Son sürüm numarasını al
       - run: echo "LATEST_VERSION=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-
-      # index.html dosyasındaki <!-- VERSION --> alanını güncelle
-      - run: |
-          sed -i "s|<!-- VERSION -->|Version: $LATEST_VERSION|g" index.html
-
-      # Değişiklikleri GitHub'a commit et
-      - run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "chore: update version in index.html to $LATEST_VERSION"
-          git push
