@@ -1,3 +1,10 @@
+# [4.9.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.8.0...v4.9.0) (2025-03-21)
+
+
+### Features
+
+* remove dev branch from release configuration ([4673b37](https://github.com/NecimDurmaz/github-tag-action-example/commit/4673b371204db70fb4f61a76471dc0cb0ceeaba9))
+
 # [4.8.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.7.0...v4.8.0) (2025-03-21)
 
 
