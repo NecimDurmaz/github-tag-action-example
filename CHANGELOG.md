@@ -1,3 +1,11 @@
+# [4.10.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.9.0...v4.10.0) (2025-03-21)
+
+
+### Features
+
+* update semantic-release plugins to latest versions ([327f5b2](https://github.com/NecimDurmaz/github-tag-action-example/commit/327f5b22ef053c156177cafc98b53d01668d2a43))
+* update semantic-release plugins to latest versions ([000a0b8](https://github.com/NecimDurmaz/github-tag-action-example/commit/000a0b88ae25f374e62a2899a7b484ab6d7eda92))
+
 # [4.9.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.8.0...v4.9.0) (2025-03-21)
 
 
