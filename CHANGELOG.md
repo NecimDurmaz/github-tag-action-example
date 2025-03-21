@@ -1,3 +1,15 @@
+# [4.8.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.7.0...v4.8.0) (2025-03-21)
+
+
+### Features
+
+* add npm plugin to semantic release configuration and disable npm publishing ([5f03942](https://github.com/NecimDurmaz/github-tag-action-example/commit/5f03942475be8d1c5dc22be84f69c9963e225fbc))
+* comment out @semantic-release/npm version in configuration ([5b5439a](https://github.com/NecimDurmaz/github-tag-action-example/commit/5b5439a0fecb4ce316960044a8e2975a50c98e07))
+* format template and improve indentation in main component ([12c5edd](https://github.com/NecimDurmaz/github-tag-action-example/commit/12c5eddd5962c34121e5f673f2111d5fd7e8ace8))
+* remove npmPublish option from semantic-release configuration ([008cc34](https://github.com/NecimDurmaz/github-tag-action-example/commit/008cc3454522110d6f81fcbc1696d72ff7775636))
+* update @semantic-release/npm to version 12 in configuration ([1b5167c](https://github.com/NecimDurmaz/github-tag-action-example/commit/1b5167c05c661ac0a27a20286aa69f0c68e9fc98))
+* update semantic-release-action to version 4 in configuration ([b2ccd39](https://github.com/NecimDurmaz/github-tag-action-example/commit/b2ccd39d5dbc3388a81ced8e6ac13c1b381a4475))
+
 # [4.7.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.6.0...v4.7.0) (2025-03-21)
 
 
