@@ -1,3 +1,10 @@
+# [4.16.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.15.0...v4.16.0) (2025-03-21)
+
+
+### Features
+
+* update version to 4.2.0 in package.json ([d771c15](https://github.com/NecimDurmaz/github-tag-action-example/commit/d771c15b490d1cbc6b333c632ee1d9febbafc16b))
+
 # [4.15.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.14.0...v4.15.0) (2025-03-21)
 
 
