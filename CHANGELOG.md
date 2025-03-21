@@ -1,3 +1,10 @@
+# [4.13.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.12.0...v4.13.0) (2025-03-21)
+
+
+### Features
+
+* update @semantic-release/github and @semantic-release/npm to latest versions ([dc7897d](https://github.com/NecimDurmaz/github-tag-action-example/commit/dc7897db15cee86826e29e95c19a4ce2a8083c80))
+
 # [4.12.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.11.0...v4.12.0) (2025-03-21)
 
 
