@@ -1,3 +1,10 @@
+# [4.7.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.6.0...v4.7.0) (2025-03-21)
+
+
+### Features
+
+* update package version and remove unused semantic release dependencies ([cf4ab36](https://github.com/NecimDurmaz/github-tag-action-example/commit/cf4ab36268c7af571440fe34718ea416465cc853))
+
 # [4.6.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.5.0...v4.6.0) (2025-03-21)
 
 
