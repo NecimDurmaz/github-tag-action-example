@@ -21,6 +21,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "@angular/build": "^19.0.7",
     "@angular/cli": "^19.0.7",
     "@angular/compiler-cli": "^19.0.6",
