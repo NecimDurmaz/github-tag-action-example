@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "4.2.0",
   "name": "angular-starter",
   "private": true,
   "scripts": {
@@ -21,6 +21,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
     "@angular/build": "^19.0.7",
     "@angular/cli": "^19.0.7",
     "@angular/compiler-cli": "^19.0.6",
