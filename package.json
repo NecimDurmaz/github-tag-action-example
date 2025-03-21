@@ -1,13 +1,12 @@
 {
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "name": "angular-starter",
   "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prepare": "husky",
-    "semantic-release": "semantic-release"
+    "prepare": "husky"
   },
   "dependencies": {
     "@angular/animations": "^19.0.6",
@@ -18,7 +17,6 @@
     "@angular/platform-browser": "^19.0.6",
     "@angular/router": "^19.0.6",
     "rxjs": "^7.8.1",
-    "semantic-release-cli": "^5.4.6",
     "tslib": "^2.5.0",
     "zone.js": "~0.15.0"
   },
@@ -29,12 +27,7 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/prompt-cli": "^19.8.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.1",
-    "@semantic-release/npm": "^12.0.1",
     "husky": "^9.1.7",
-    "semantic-release": "^24.2.3",
     "typescript": "^5.6.3"
   },
   "husky": {
