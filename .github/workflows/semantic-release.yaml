@@ -29,13 +29,13 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         id: semantic
         with:
-          semantic_version: 17
+          semantic_version: 24
           extra_plugins: |
-            @semantic-release/commit-analyzer@8
-            @semantic-release/release-notes-generator@9
-            @semantic-release/changelog@5
-            @semantic-release/git@9
-            @semantic-release/exec@5
+            @semantic-release/commit-analyzer@13
+            @semantic-release/release-notes-generator@14
+            @semantic-release/changelog@6
+            @semantic-release/git@10
+            @semantic-release/exec@7
         #            @semantic-release/github@10
         #            @semantic-release/npm@10
         env:
