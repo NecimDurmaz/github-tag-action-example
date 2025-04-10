@@ -1,3 +1,11 @@
+# [4.17.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.16.0...v4.17.0) (2025-04-10)
+
+
+### Features
+
+* change trigger from push to pull_request in semantic-release configuration ([f633469](https://github.com/NecimDurmaz/github-tag-action-example/commit/f63346920583c05705c4fa92eae49799f8b4cc34))
+* update semantic-release trigger to workflow_dispatch and clean up main.ts ([181116c](https://github.com/NecimDurmaz/github-tag-action-example/commit/181116c5977b069e6657936db7da63381c5047ae))
+
 # [4.16.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.15.0...v4.16.0) (2025-03-21)
 
 
