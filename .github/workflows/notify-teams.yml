@@ -1,0 +1,16 @@
+# .github/workflows/notify-teams.yml
+name: Notify Teams
+
+on:
+  workflow_call:  # <-- Bu satır reusable workflow için şart
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send message to Microsoft Teams
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d "{\"text\": \"🚀 Yeni bir push yapıldı: $GITHUB_REPOSITORY@$GITHUB_SHA\"}" \
+               ${{ secrets.TEAMS_URL }}
