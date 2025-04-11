@@ -16,4 +16,4 @@ jobs:
         run: |
           curl -H "Content-Type: application/json" \
                -d "{\"text\": \"🚀 Yeni bir push yapıldı: $GITHUB_REPOSITORY@$GITHUB_SHA\"}" \
-               ${{ secrets.TEAMS_URL }}
+               https://ersas.webhook.office.com/webhookb2/fe02413e-2341-4e32-86fd-6999e8127e96@db0e3f28-856a-4556-99f7-821c8f3f2801/IncomingWebhook/caf57ca8d4474a748a261218f436d4ec/be96b88c-b537-4f44-a451-940e23713a58/V2mYY7y25Xh7daDyoP6SNQz2BePt-FjfDfv29Cv_-WYEE1
