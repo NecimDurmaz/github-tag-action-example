@@ -3,12 +3,7 @@ name: Notify Teams
 
 on:
   workflow_call: # <-- Bu satır reusable workflow için şart
-    secrets:
-      TEAMS_WEBHOOK:
-        required: true  # Bu secret dışarıdan gönderilmek zorunda
-      VERSION:
-        required: true  # Bu secret dışarıdan gönderilmek zorunda
-
+ 
 jobs:
   notify:
     runs-on: ubuntu-latest
