@@ -1,3 +1,10 @@
+# [4.19.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.18.0...v4.19.0) (2025-04-11)
+
+
+### Features
+
+* require TEAMS_WEBHOOK secret in notify-teams workflow and update semantic-release ([05c6821](https://github.com/NecimDurmaz/github-tag-action-example/commit/05c68211ced7ed087c9480744c881c1e5c7878c5))
+
 # [4.18.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.17.0...v4.18.0) (2025-04-11)
 
 
