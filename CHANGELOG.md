@@ -1,3 +1,11 @@
+# [4.21.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.20.0...v4.21.0) (2025-04-11)
+
+
+### Features
+
+* add VERSION secret to notify-teams workflow and update message format ([fe690ef](https://github.com/NecimDurmaz/github-tag-action-example/commit/fe690efe2a2ffe48a222b2498dc715188f962165))
+* remove secret requirements from notify-teams workflow and update ([f5ccc3b](https://github.com/NecimDurmaz/github-tag-action-example/commit/f5ccc3b7e826c483537fa287c5d6100919c1e32d))
+
 # [4.20.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.19.0...v4.20.0) (2025-04-11)
 
 
