@@ -1,3 +1,10 @@
+# [4.22.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.21.0...v4.22.0) (2025-04-11)
+
+
+### Features
+
+* update notify-teams workflow message to include repository name ([5ca556f](https://github.com/NecimDurmaz/github-tag-action-example/commit/5ca556fa0f4cd9bad874ce6f4e723bc33edc07a5))
+
 # [4.21.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.20.0...v4.21.0) (2025-04-11)
 
 
