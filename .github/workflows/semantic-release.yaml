@@ -49,7 +49,7 @@ jobs:
           echo ${{ steps.semantic.outputs.new_release_patch_version }}
 
   call-notify:
-    #    needs: build
+    needs: semantic-release
     uses: ./.github/workflows/notify-teams.yml  # Reusable workflow'u çağırıyor
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
