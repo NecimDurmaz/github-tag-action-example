@@ -1,3 +1,10 @@
+# [4.20.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.19.0...v4.20.0) (2025-04-11)
+
+
+### Features
+
+* update notify-teams workflow to use a specific webhook URL ([a84c5d1](https://github.com/NecimDurmaz/github-tag-action-example/commit/a84c5d13cb009b2b5ff94813d1052a641a19ce13))
+
 # [4.19.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.18.0...v4.19.0) (2025-04-11)
 
 
