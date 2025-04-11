@@ -1,3 +1,10 @@
+# [4.18.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.17.0...v4.18.0) (2025-04-11)
+
+
+### Features
+
+* add notify-teams workflow and integrate it into semantic-release configuration ([ac30023](https://github.com/NecimDurmaz/github-tag-action-example/commit/ac3002356ce4b29dc9bad6a1312c1cbe64a39fe6))
+
 # [4.17.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.16.0...v4.17.0) (2025-04-10)
 
 
