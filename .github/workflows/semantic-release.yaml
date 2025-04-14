@@ -92,7 +92,6 @@ jobs:
 
 
         📝 **Versiyon Notları:** 
-          \n
-                   ${{ needs.semantic-release.outputs.changelog_diff }}
+           ${{ needs.semantic-release.outputs.changelog_diff }}
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
