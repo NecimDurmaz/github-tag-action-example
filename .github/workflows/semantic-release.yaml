@@ -50,8 +50,4 @@ jobs:
 
   call-notify:
     needs: semantic-release
-    uses: NecimDurmaz/github-action-yamls/notify-teams.yml@main
-    with:
-      message: "🚀 $GITHUB_REPOSITORY -  Yeni push yapıldı – Son sürüm:${{ steps.semantic.outputs.new_release_version }}"
-    secrets:
-      TEAMS_WEBHOOK: "https://ersas.webhook.office.com/webhookb2/fe02413e-2341-4e32-86fd-6999e8127e96@db0e3f28-856a-4556-99f7-821c8f3f2801/IncomingWebhook/da2bced8a14e46c388c9cd3ddcd1372d/be96b88c-b537-4f44-a451-940e23713a58/V2OhkEkTSUHQMcvIKOrM4iIikPVZ32mD5l1pqLOpXtQMY1"
+    uses: ./.github/workflows/notify-teams.yml  # Reusable workflow'u çağırıyor
