@@ -1,3 +1,10 @@
+# [4.35.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.34.0...v4.35.0) (2025-04-14)
+
+
+### Features
+
+* add step to print parameters before sending to Teams in semantic-release.yaml ([4cf015d](https://github.com/NecimDurmaz/github-tag-action-example/commit/4cf015d92efce16fbb88c8f1c5bef5a635d050eb))
+
 # [4.34.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.33.0...v4.34.0) (2025-04-14)
 
 
