@@ -1,3 +1,10 @@
+# [4.37.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.36.0...v4.37.0) (2025-04-14)
+
+
+### Features
+
+* remove code block formatting for changelog diff output in semantic-release.yaml ([421fe94](https://github.com/NecimDurmaz/github-tag-action-example/commit/421fe942466960e13e5f2d262348ef73ce9b0d4e))
+
 # [4.36.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.35.0...v4.36.0) (2025-04-14)
 
 
