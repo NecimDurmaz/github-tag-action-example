@@ -1,3 +1,10 @@
+# [4.30.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.29.0...v4.30.0) (2025-04-14)
+
+
+### Features
+
+* include changelog in notify-teams message output ([956de21](https://github.com/NecimDurmaz/github-tag-action-example/commit/956de21bd2a744ff876b0e16ecae98598e00213c))
+
 # [4.29.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.28.0...v4.29.0) (2025-04-14)
 
 
