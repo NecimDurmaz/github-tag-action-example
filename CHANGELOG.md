@@ -1,3 +1,10 @@
+# [4.36.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.35.0...v4.36.0) (2025-04-14)
+
+
+### Features
+
+* update changelog diff output to use correct step in semantic-release.yaml ([d0e1a5d](https://github.com/NecimDurmaz/github-tag-action-example/commit/d0e1a5d5354da8fc4092f261dfe459386d408b41))
+
 # [4.35.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.34.0...v4.35.0) (2025-04-14)
 
 
