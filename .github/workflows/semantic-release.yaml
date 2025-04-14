@@ -88,10 +88,8 @@ jobs:
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
       message: |
-        🚀 **${{ github.repository }}** - Yeni sürüm yayımlandı: **${{ needs.semantic-release.outputs.new_release_version }}**
-
-
-        📝 **Versiyon Notları:** 
+        # 🚀 **${{ github.repository }}** - Yeni sürüm yayımlandı: **${{ needs.semantic-release.outputs.new_release_version }}** \n\n
+        # 📝 **Versiyon Notları:** 
            ${{ needs.semantic-release.outputs.changelog_diff }}
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
