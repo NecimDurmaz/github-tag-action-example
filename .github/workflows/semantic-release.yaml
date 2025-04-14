@@ -74,7 +74,6 @@ jobs:
         run: |
           echo "Repository: ${{ github.repository }}"
           echo "New release version: ${{ steps.semantic.outputs.new_release_version }}"
-          echo "CHANGELOG diff: ${{ steps.get_changelog.outputs.changelog_diff }}"
           echo "CHANGELOG diff: ${{ needs.semantic-release.outputs.changelog_diff  }}"
 
   call-notify:
