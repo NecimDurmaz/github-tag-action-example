@@ -70,7 +70,7 @@ jobs:
           echo ${{ steps.semantic.outputs.new_release_major_version }}
           echo ${{ steps.semantic.outputs.new_release_minor_version }}
           echo ${{ steps.semantic.outputs.new_release_patch_version }}
-          echo CHANGELOG: ${{ steps.semantic.outputs.changelog }}
+          echo CHANGELOG DIFF: ${{ steps.get_changelog.outputs.changelog_diff }}
 
   call-notify:
     needs: semantic-release
