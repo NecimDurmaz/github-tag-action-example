@@ -59,6 +59,9 @@ jobs:
       - name: Get last CHANGELOG diff
         id: get_changelog
         run: |
+          # Git diff çıktısını hem konsola yazdır, hem de GitHub Actions'ın output'una aktar
+          echo "Getting last CHANGELOG diff..."
+          git diff HEAD~1 HEAD -- CHANGELOG.md
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           git diff HEAD~1 HEAD -- CHANGELOG.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
