@@ -66,6 +66,17 @@ jobs:
           git diff HEAD~1 HEAD -- CHANGELOG.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
+  print-parameters:
+    needs: semantic-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print parameters before sending to Teams
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "New release version: ${{ steps.semantic.outputs.new_release_version }}"
+          echo "CHANGELOG diff: ${{ steps.get_changelog.outputs.changelog_diff }}"
+          echo "CHANGELOG diff: ${{ needs.semantic-release.outputs.changelog_diff  }}"
+
   call-notify:
     needs: semantic-release
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
