@@ -1,3 +1,12 @@
+# [4.23.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.22.0...v4.23.0) (2025-04-14)
+
+
+### Features
+
+* update notify-teams workflow to maintain message format and ensure webhook functionality ([8c7479f](https://github.com/NecimDurmaz/github-tag-action-example/commit/8c7479f536bf4efb8a671574f281a9d3d744c292))
+* update notify-teams workflow to use a specific repository and customize message format ([bdbb58a](https://github.com/NecimDurmaz/github-tag-action-example/commit/bdbb58a00de3241bfdb4fb87c0c54c859c7bfbe3))
+* update notify-teams workflow to use local file and modify webhook URL ([b02021b](https://github.com/NecimDurmaz/github-tag-action-example/commit/b02021b699e7540f36c32f9d1710f936e1ec5bcc))
+
 # [4.22.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.21.0...v4.22.0) (2025-04-11)
 
 
