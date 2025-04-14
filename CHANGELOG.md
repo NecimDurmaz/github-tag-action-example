@@ -1,3 +1,11 @@
+# [4.33.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.32.0...v4.33.0) (2025-04-14)
+
+
+### Features
+
+* remove conditional check for changelog diff retrieval in semantic-release.yaml ([9685346](https://github.com/NecimDurmaz/github-tag-action-example/commit/96853467037599cb78a539f600907a6ff8da7b54))
+* remove unused step for new release version output in semantic-release.yaml ([c1b42e4](https://github.com/NecimDurmaz/github-tag-action-example/commit/c1b42e4d79b49c589b626a8e7c65402775713c2d))
+
 # [4.32.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.31.0...v4.32.0) (2025-04-14)
 
 
