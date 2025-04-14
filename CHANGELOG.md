@@ -1,3 +1,10 @@
+# [4.27.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.26.0...v4.27.0) (2025-04-14)
+
+
+### Features
+
+* update TEAMS_WEBHOOK URL in semantic-release.yaml ([e881056](https://github.com/NecimDurmaz/github-tag-action-example/commit/e881056cfea84a149f31bc9c867fb8e1d113a936))
+
 # [4.26.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.25.0...v4.26.0) (2025-04-14)
 
 
