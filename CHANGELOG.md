@@ -1,3 +1,10 @@
+# [4.25.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.24.0...v4.25.0) (2025-04-14)
+
+
+### Features
+
+* update notify-teams message to include dynamic version number ([c2e36a6](https://github.com/NecimDurmaz/github-tag-action-example/commit/c2e36a6c95e1c85a16bb2d5dab4cfcdb4fb207b7))
+
 # [4.24.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.23.0...v4.24.0) (2025-04-14)
 
 
