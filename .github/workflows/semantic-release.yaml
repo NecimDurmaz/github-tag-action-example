@@ -82,6 +82,7 @@ jobs:
     with:
       message: |
         🚀 **${{ github.repository }}** - Yeni sürüm yayımlandı: **${{ needs.semantic-release.outputs.new_release_version }}**
+          ### Features
         ```
         ### Features
           * update changelog section formatting in semantic-release.yaml ([ec929de](https://github.com/NecimDurmaz/github-tag-action-example/commit/ec929de5deb00741bf2af49c1a462ba41859543d))
