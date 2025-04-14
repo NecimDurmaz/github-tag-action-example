@@ -61,14 +61,16 @@ jobs:
         run: |
           echo "Getting last CHANGELOG diff..."
 
-          # Git diff'ten sadece eklenen satırları al (+ ile başlayan), baştaki + işaretini sil, sonra \n ekle
-          changelog=$(git diff HEAD~1 HEAD -- CHANGELOG.md | grep '^+' | tail -n +2 | sed 's/^+//' | sed 's/$/\\n/')
+          # Sadece eklenen satırları al, ilk satırı atla, baştaki '+' işaretlerini kaldır, \n ekle
+          changelog=$(git diff HEAD~1 HEAD -- CHANGELOG.md | grep '^+' | tail -n +3 | sed 's/^+//' | sed 's/$/\\n/')
 
-          # Son satırı silmek için head ile bir satır eksilt
+          # Son satırı sil
           changelog=$(echo "$changelog" | head -n -1)
 
-          # Hem ekrana yazdır, hem GITHUB_OUTPUT'a aktar
+          # Konsola yaz
           echo "$changelog"
+          
+          # GitHub output olarak aktar
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           echo "$changelog" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
