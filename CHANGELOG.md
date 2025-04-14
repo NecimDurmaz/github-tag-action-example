@@ -1,3 +1,10 @@
+# [4.38.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.37.0...v4.38.0) (2025-04-14)
+
+
+### Features
+
+* update changelog section formatting in semantic-release.yaml ([ec929de](https://github.com/NecimDurmaz/github-tag-action-example/commit/ec929de5deb00741bf2af49c1a462ba41859543d))
+
 # [4.37.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.36.0...v4.37.0) (2025-04-14)
 
 
