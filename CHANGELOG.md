@@ -1,3 +1,10 @@
+# [4.29.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.28.0...v4.29.0) (2025-04-14)
+
+
+### Features
+
+* enhance notify-teams message format to include changelog details ([1d779e1](https://github.com/NecimDurmaz/github-tag-action-example/commit/1d779e124be5eb5d85416089160217bdb0aa7194))
+
 # [4.28.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.27.0...v4.28.0) (2025-04-14)
 
 
