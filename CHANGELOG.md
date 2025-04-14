@@ -1,3 +1,10 @@
+# [4.41.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.40.0...v4.41.0) (2025-04-14)
+
+
+### Features
+
+* add version notes section to release message in semantic-release.yaml ([024b18e](https://github.com/NecimDurmaz/github-tag-action-example/commit/024b18ece5e623d1bdc03fb91b74e28a09c7dbd7))
+
 # [4.40.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.39.0...v4.40.0) (2025-04-14)
 
 
