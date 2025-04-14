@@ -84,8 +84,6 @@ jobs:
         🚀 **${{ github.repository }}** - Yeni sürüm yayımlandı: **${{ needs.semantic-release.outputs.new_release_version }}**
 
         📝 **CHANGELOG Değişiklikleri:**
-        ```
         ${{ needs.semantic-release.outputs.changelog_diff }}
-        ```
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
