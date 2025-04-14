@@ -58,19 +58,10 @@ jobs:
 
       - name: Get last CHANGELOG diff
         id: get_changelog
-        if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           git diff HEAD~1 HEAD -- CHANGELOG.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Do something when a new release published
-        run: |
-          echo ${{ steps.semantic.outputs.new_release_version }}
-          echo ${{ steps.semantic.outputs.new_release_major_version }}
-          echo ${{ steps.semantic.outputs.new_release_minor_version }}
-          echo ${{ steps.semantic.outputs.new_release_patch_version }}
-          echo CHANGELOG DIFF: ${{ steps.get_changelog.outputs.changelog_diff }}
 
   call-notify:
     needs: semantic-release
