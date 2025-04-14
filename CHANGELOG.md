@@ -1,3 +1,10 @@
+# [4.28.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.27.0...v4.28.0) (2025-04-14)
+
+
+### Features
+
+* use secret for TEAMS_WEBHOOK in semantic-release.yaml ([effe910](https://github.com/NecimDurmaz/github-tag-action-example/commit/effe91080fa4c7aef7685a4fd0671b54d6549103))
+
 # [4.27.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.26.0...v4.27.0) (2025-04-14)
 
 
