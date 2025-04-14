@@ -52,7 +52,7 @@ jobs:
 
   call-notify:
     needs: semantic-release
-    uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yml@main
+    uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
       message: "🚀 $GITHUB_REPOSITORY -  Yeni push yapıldı – Son sürüm:${{ steps.semantic.outputs.new_release_version }}"
     secrets:
