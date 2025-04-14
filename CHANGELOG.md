@@ -1,3 +1,16 @@
+# [4.47.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.46.0...v4.47.0) (2025-04-14)
+
+
+### Bug Fixes
+
+* improve error logging in index.html ([65e2998](https://github.com/NecimDurmaz/github-tag-action-example/commit/65e299817496766ff17a72753f0e6d838d69591a))
+
+
+### Features
+
+* add Material Icons font styles to index.html ([e4104d6](https://github.com/NecimDurmaz/github-tag-action-example/commit/e4104d6ec0ebdc40cb40b12020bd17250fb47b3e))
+* update angus version to v18.0.97 in index.html ([99dbb2c](https://github.com/NecimDurmaz/github-tag-action-example/commit/99dbb2cd978610339481cf7d2194936e7d5ef633))
+
 # [4.46.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.45.0...v4.46.0) (2025-04-14)
 
 
