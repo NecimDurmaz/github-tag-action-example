@@ -1,3 +1,17 @@
+# [4.24.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.23.0...v4.24.0) (2025-04-14)
+
+
+### Features
+
+* update angus version to v18.0.94 in index.html ([9fa23fd](https://github.com/NecimDurmaz/github-tag-action-example/commit/9fa23fdd4e78d08bf641eea02d726b8e882dd7d4))
+* update angus version to v18.0.95 in index.html ([75a3d3f](https://github.com/NecimDurmaz/github-tag-action-example/commit/75a3d3f3bf2a1236660f4ddd9b2d3a368f696ade))
+* update angus version to v18.0.96 in index.html ([4b43f69](https://github.com/NecimDurmaz/github-tag-action-example/commit/4b43f69322ec6fb5c9a4592f78741b3ad6cd88d3))
+* update notify-teams action path in semantic-release.yaml ([1bf1c2e](https://github.com/NecimDurmaz/github-tag-action-example/commit/1bf1c2ecb54353ed447273d7d7df732f5d673587))
+* update notify-teams action path in semantic-release.yaml ([2262b08](https://github.com/NecimDurmaz/github-tag-action-example/commit/2262b08350ca0b8e167e662c5e5c18160ba4e9ac))
+* update notify-teams message to include specific version number ([143a1c9](https://github.com/NecimDurmaz/github-tag-action-example/commit/143a1c99af399c3f49858a5a43357be4cde7827b))
+* update semantic-release workflow to trigger on push to main branch ([28f5777](https://github.com/NecimDurmaz/github-tag-action-example/commit/28f5777084a1623a3db67107c7bb7be340c10339))
+* update semantic-release workflow to trigger on push to master and modify notify-teams usage ([9f748a6](https://github.com/NecimDurmaz/github-tag-action-example/commit/9f748a6273c348a0dd7f55e0d6b5cde8496e7090))
+
 # [4.23.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.22.0...v4.23.0) (2025-04-14)
 
 
