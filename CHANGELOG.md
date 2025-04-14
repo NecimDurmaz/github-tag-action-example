@@ -1,3 +1,11 @@
+# [4.45.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.44.0...v4.45.0) (2025-04-14)
+
+
+### Features
+
+* update release message formatting in semantic-release.yaml ([067887f](https://github.com/NecimDurmaz/github-tag-action-example/commit/067887f7dc83fb95b9b3305a7b611805cb6827c6))
+* update release message formatting in semantic-release.yaml ([d7c1b27](https://github.com/NecimDurmaz/github-tag-action-example/commit/d7c1b274de31d1aa6dd4eaf98cc9d805a60aaf59))
+
 # [4.44.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.43.0...v4.44.0) (2025-04-14)
 
 
