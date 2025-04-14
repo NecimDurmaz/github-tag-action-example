@@ -63,7 +63,7 @@ jobs:
           echo "Getting last CHANGELOG diff..."
           git diff HEAD~1 HEAD -- CHANGELOG.md
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
-          git diff HEAD~1 HEAD -- CHANGELOG.md >> $GITHUB_OUTPUT
+          git diff HEAD~1 HEAD -- CHANGELOG.md | sed 's/$/\\n/' >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
   print-parameters:
