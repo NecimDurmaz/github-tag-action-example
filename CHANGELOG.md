@@ -1,3 +1,10 @@
+# [4.26.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.25.0...v4.26.0) (2025-04-14)
+
+
+### Features
+
+* remove conditional check for new release in notify-teams action ([6ecb94e](https://github.com/NecimDurmaz/github-tag-action-example/commit/6ecb94e402d970907cbf29ccc589fc2f50f2d47e))
+
 # [4.25.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.24.0...v4.25.0) (2025-04-14)
 
 
