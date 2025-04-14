@@ -52,7 +52,6 @@ jobs:
 
   call-notify:
     needs: semantic-release
-    if: needs.semantic-release.outputs.new_release_published == 'true'
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
       message: "🚀 ${{ github.repository }} - Yeni push yapıldı – Son sürüm: ${{ needs.semantic-release.outputs.new_release_version }}"
