@@ -54,6 +54,12 @@ jobs:
     needs: semantic-release
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
-      message: "🚀 ${{ github.repository }} - Yeni push yapıldı – Son sürüm: ${{ needs.semantic-release.outputs.new_release_version }}"
+      message: |
+        🚀 **${{ github.repository }}** - Yeni sürüm yayımlandı: **${{ needs.semantic-release.outputs.new_release_version }}**
+
+        📝 **CHANGELOG Değişiklikleri:**
+        ```
+        ${{ needs.semantic-release.outputs.changelog_diff }}
+        ```
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
