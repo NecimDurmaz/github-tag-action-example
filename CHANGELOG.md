@@ -1,3 +1,10 @@
+## [4.50.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.1...v4.50.2) (2025-04-15)
+
+
+### Bug Fixes
+
+* simplify branch creation logic in semantic-release.yaml ([eb8c85d](https://github.com/NecimDurmaz/github-tag-action-example/commit/eb8c85d39f93c47e595462a2a7cf8a734b40cdde))
+
 ## [4.50.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.0...v4.50.1) (2025-04-15)
 
 
