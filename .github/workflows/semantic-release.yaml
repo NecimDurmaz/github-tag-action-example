@@ -91,7 +91,7 @@ jobs:
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
       secrets:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   call-notify:
     needs: semantic-release
