@@ -1,4 +1,4 @@
-name: Semantic Release
+name: Create Release
 
 on:
   workflow_dispatch:
@@ -80,10 +80,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create release branch
-        if: steps.semantic.outputs.new_release_published == 'true'
         run: |
           version=${{ steps.semantic.outputs.new_release_version }}
           branch_name="release-v$version"
+          echp "new_release_published: ${{ steps.semantic.outputs.new_release_published }}"
           echo "Creating branch: $branch_name"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
