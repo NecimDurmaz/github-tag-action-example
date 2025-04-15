@@ -1,3 +1,10 @@
+## [4.50.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.0...v4.50.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* correct typo in echo command in semantic-release.yaml ([c1e681a](https://github.com/NecimDurmaz/github-tag-action-example/commit/c1e681a970ec3188f9d9ef1dbfad14c9b80a261c))
+
 # [4.50.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.49.0...v4.50.0) (2025-04-15)
 
 
