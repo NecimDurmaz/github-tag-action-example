@@ -87,7 +87,7 @@ jobs:
 
   create-release-branch:
     needs: semantic-release
-    uses: NecimDurmaz/github-action-yamls/.github/workflows/create-release-branch@main
+    uses: NecimDurmaz/github-action-yamls/.github/workflows/create-release-branch.yaml@main
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
       secrets:
