@@ -1,10 +1,10 @@
 name: Semantic Release
 
 on:
-  #  workflow_dispatch:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - main
 jobs:
   semantic-release:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
@@ -74,6 +74,21 @@ jobs:
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           echo "$changelog" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+  create-release-branch:
+    needs: semantic-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release branch
+        if: steps.semantic.outputs.new_release_published == 'true'
+        run: |
+          version=${{ steps.semantic.outputs.new_release_version }}
+          branch_name="release-v$version"
+          echo "Creating branch: $branch_name"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch_name"
+          git push origin "$branch_name"
 
   print-parameters:
     needs: semantic-release
