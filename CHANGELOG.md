@@ -1,3 +1,17 @@
+# [4.51.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.2...v4.51.0) (2025-04-15)
+
+
+### Bug Fixes
+
+* rename GITHUB_TOKEN to MY_GITHUB_TOKEN in semantic-release.yaml ([1e2ac2d](https://github.com/NecimDurmaz/github-tag-action-example/commit/1e2ac2db1d1b1abc6e179fb1f09f6ab34fb1779a))
+* update create-release-branch step to use inline script for branch creation ([eeff2c5](https://github.com/NecimDurmaz/github-tag-action-example/commit/eeff2c51c87946c5e0b169bd7827e32721f9e2ff))
+* update workflow reference for create-release-branch action ([1b5e3a5](https://github.com/NecimDurmaz/github-tag-action-example/commit/1b5e3a5f966d4e83fd5aec985ad93f396afac9e7))
+
+
+### Features
+
+* refactor release branch creation to use external action ([ceebcf6](https://github.com/NecimDurmaz/github-tag-action-example/commit/ceebcf64c77c5dd2fba227ebb6c2759ba2bc0497))
+
 ## [4.50.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.1...v4.50.2) (2025-04-15)
 
 
