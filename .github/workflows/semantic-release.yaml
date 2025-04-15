@@ -85,13 +85,23 @@ jobs:
           echo "New release version: ${{ steps.semantic.outputs.new_release_version }}"
           echo "CHANGELOG diff: ${{ needs.semantic-release.outputs.changelog_diff  }}"
 
-  create-release-branch:
+  create-branch:
     needs: semantic-release
-    uses: NecimDurmaz/github-action-yamls/.github/workflows/create-release-branch.yaml@main
-    with:
-      version: ${{ needs.semantic-release.outputs.new_release_version }}
-      secrets:
-        MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create release branch
+        env:
+          VERSION: ${{ inputs.version }}
+          GITHUB_TOKEN: ${{ secrets.token }}
+        run: |
+          BRANCH_NAME="release-v$VERSION"
+          echo "Creating branch $BRANCH_NAME"
+          git checkout -b "$BRANCH_NAME"
+          git push origin "$BRANCH_NAME"
 
   call-notify:
     needs: semantic-release
