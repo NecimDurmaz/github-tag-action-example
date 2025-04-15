@@ -1,3 +1,10 @@
+## [4.51.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.0...v4.51.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* update release branch creation to use new_release_version output ([124f80c](https://github.com/NecimDurmaz/github-tag-action-example/commit/124f80ce5e4e438dc8a991a4085ab556a9b33bb1))
+
 # [4.51.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.50.2...v4.51.0) (2025-04-15)
 
 
