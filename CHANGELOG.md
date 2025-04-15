@@ -1,3 +1,11 @@
+# [4.49.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.48.0...v4.49.0) (2025-04-15)
+
+
+### Features
+
+* add workflow to create release branch after publishing ([50ec891](https://github.com/NecimDurmaz/github-tag-action-example/commit/50ec891d846576a940f59f6f09fd0072d70725cd))
+* update angus version to v18.0.9123 in index.html ([fc6cefc](https://github.com/NecimDurmaz/github-tag-action-example/commit/fc6cefc1a2276f1320fc5bfa6b95fbe83cae71ab))
+
 # [4.48.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.47.0...v4.48.0) (2025-04-14)
 
 
