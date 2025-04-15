@@ -1,3 +1,11 @@
+# [4.50.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.49.0...v4.50.0) (2025-04-15)
+
+
+### Features
+
+* rename workflow to 'Create Release' and fix typo in echo command ([61e457f](https://github.com/NecimDurmaz/github-tag-action-example/commit/61e457fa4f012a087141fbbcbdfe90e3660c0fa8))
+* update angus version to v18.0.91213 in index.html ([912ffb4](https://github.com/NecimDurmaz/github-tag-action-example/commit/912ffb4a537e53ad9114c38f5a6fb4933e704343))
+
 # [4.49.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.48.0...v4.49.0) (2025-04-15)
 
 
