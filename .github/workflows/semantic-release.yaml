@@ -95,8 +95,7 @@ jobs:
           fetch-depth: 0
       - name: Create release branch
         env:
-          VERSION: ${{ inputs.version }}
-          GITHUB_TOKEN: ${{ secrets.token }}
+          VERSION: ${{ needs.semantic-release.outputs.new_release_version  }}
         run: |
           BRANCH_NAME="release-v$VERSION"
           echo "Creating branch $BRANCH_NAME"
