@@ -1,3 +1,10 @@
+## [4.51.3-main.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.1...v4.51.3-main.2) (2025-04-16)
+
+
+### Bug Fixes
+
+* update angusVersion tag to include additional version details ([0017b42](https://github.com/NecimDurmaz/github-tag-action-example/commit/0017b424855cbe767406cc4c83218134c754655f))
+
 ## [4.51.3-main.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.2...v4.51.3-main.1) (2025-04-16)
 
 
