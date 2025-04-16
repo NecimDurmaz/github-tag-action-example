@@ -1,3 +1,11 @@
+## [4.51.3-main.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.2...v4.51.3-main.1) (2025-04-16)
+
+
+### Bug Fixes
+
+* update .releaserc to change branch configuration for prereleases ([6b01605](https://github.com/NecimDurmaz/github-tag-action-example/commit/6b0160560368540f4dc3ace394c3ec17fe0fb41a))
+* update .releaserc to include 'test' branch as a prerelease ([1f8bb43](https://github.com/NecimDurmaz/github-tag-action-example/commit/1f8bb4313064648cf8c81e9c235fccf3b77297b7))
+
 ## [4.51.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.1...v4.51.2) (2025-04-15)
 
 
