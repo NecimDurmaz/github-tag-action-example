@@ -1,3 +1,10 @@
+# [4.65.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.64.0...v4.65.0) (2025-10-24)
+
+
+### feat
+
+* add ts-node dependency to package.json ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/7f7efcd6aae5797e7a662556a8ce61e2b8b6be1d))
+
 # [4.64.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.63.0...v4.64.0) (2025-10-24)
 
 
