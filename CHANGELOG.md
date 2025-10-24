@@ -1,3 +1,10 @@
+# [4.59.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.58.0...v4.59.0) (2025-10-24)
+
+
+### Features
+
+* optimize Dockerfile for improved build and runtime stages ([d9e7ab4](https://github.com/NecimDurmaz/github-tag-action-example/commit/d9e7ab47c2fe3bbec63fcd7130c355d2fd51fb0d))
+
 # [4.58.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.57.0...v4.58.0) (2025-10-24)
 
 
