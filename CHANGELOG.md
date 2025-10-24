@@ -1,3 +1,10 @@
+# [4.67.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.66.0...v4.67.0) (2025-10-24)
+
+
+### feat
+
+* add logging for commit transformation and JIRA ID extraction ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/5eb08bbd5a5785e421f29fc53cc52b266c408ce4))
+
 # [4.66.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.65.0...v4.66.0) (2025-10-24)
 
 
