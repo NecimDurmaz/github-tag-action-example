@@ -1,3 +1,15 @@
+# [4.76.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.75.0...v4.76.0) (2025-10-24)
+
+
+### Bug Fixes
+
+* correct HTML structure in main template by fixing header tag ([e865411](https://github.com/NecimDurmaz/github-tag-action-example/commit/e865411591b2c5597b89ac8377aa734edefb8cec))
+
+
+### Features
+
+* enhance JIRA ID extraction with improved formatting and unique sorting ([f10e4a3](https://github.com/NecimDurmaz/github-tag-action-example/commit/f10e4a3858a95daec88935806056832419078103))
+
 # [4.75.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.74.0...v4.75.0) (2025-10-24)
 
 
