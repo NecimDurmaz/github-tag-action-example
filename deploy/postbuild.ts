@@ -1,9 +1,24 @@
+console.log('post-build script started...');
 const yargs = require('yargs');
 const fs = require('fs');
 
 const args = yargs.option('deploy', {default: true}).argv;
 const gitCommit = (process.env as any).GIT_COMMIT;
 const buildTag = (process.env as any).BUILD_TAG;
+console.log('Environment variables:', {
+    GIT_COMMIT: gitCommit,
+    BUILD_TAG: buildTag,
+})
+if (args && typeof args === 'object') {
+    console.log('args:', {
+        deploy: args.deploy,
+        commit: args.commit,
+        tag: args.tag,
+
+    });
+    console.log('Command line arguments:', args);
+
+}
 
 function buildStampHtml(filePath: string) {
     // tag:    '${BUILD_TAG}'
@@ -15,6 +30,7 @@ function buildStampHtml(filePath: string) {
     if (args.hasOwnProperty('commit') && args.hasOwnProperty('tag')) {
         commit = args.commit;
         tag = args.tag;
+        console.log('Using --commit and --tag parameters:', commit, tag);
     } else {
         console.warn(
             'No --commit and --tag parameters. Looking for environment variables GIT_COMMIT and BUILD_TAG'
