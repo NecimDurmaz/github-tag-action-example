@@ -1,3 +1,13 @@
+# [4.53.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.1...v4.53.0) (2025-10-24)
+
+
+### Features
+
+* add Dockerfile and .dockerignore for containerization ([26a997c](https://github.com/NecimDurmaz/github-tag-action-example/commit/26a997c0ddf325e8e7e54d949c2ad26716c065d1))
+* add print-parameters job to create-release workflow ([7668fb1](https://github.com/NecimDurmaz/github-tag-action-example/commit/7668fb14d19b13f588a4122be4d063f41de434c0))
+* add workflows for semantic release, Docker build, and branch creation ([de81034](https://github.com/NecimDurmaz/github-tag-action-example/commit/de810349af1da2da9f43f26d94d8fe18e3d4a93b))
+* update create-release workflow and add backup configuration ([807d44f](https://github.com/NecimDurmaz/github-tag-action-example/commit/807d44f875d56d682c923d2e71c5a4d5aefc7a70))
+
 ## [4.52.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0...v4.52.1) (2025-10-24)
 
 
