@@ -1,3 +1,11 @@
+# [4.52.0-main.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0-main.1...v4.52.0-main.2) (2025-10-24)
+
+
+### Bug Fixes
+
+* enable credential persistence for GitHub Actions in semantic-release.yaml ([2d161df](https://github.com/NecimDurmaz/github-tag-action-example/commit/2d161df354f5ee79518994b8be73644f984b219a))
+* update application name to "Angular Test12" in main.ts ([14c7573](https://github.com/NecimDurmaz/github-tag-action-example/commit/14c7573048aa4eab7f9370a3f902d739d33e068a))
+
 # [4.52.0-main.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.3...v4.52.0-main.1) (2025-10-24)
 
 
