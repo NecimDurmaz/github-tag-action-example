@@ -1,3 +1,16 @@
+# [4.52.0-main.3](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0-main.2...v4.52.0-main.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* correct version display typo in main.ts ([c475bdc](https://github.com/NecimDurmaz/github-tag-action-example/commit/c475bdc0d92780b5033da42e60bc1fbf982f3b09))
+* update credential persistence setting in semantic-release.yaml ([5873e92](https://github.com/NecimDurmaz/github-tag-action-example/commit/5873e92187dabf8425354ad2022dc73d68ab1bd2))
+
+
+### Features
+
+* create .releaserc.json for semantic release configuration ([662ea4a](https://github.com/NecimDurmaz/github-tag-action-example/commit/662ea4a4ab9681d5e49eda2439052feba959fe8a))
+
 # [4.52.0-main.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0-main.1...v4.52.0-main.2) (2025-10-24)
 
 
