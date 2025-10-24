@@ -1,3 +1,10 @@
+# [4.62.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.61.0...v4.62.0) (2025-10-24)
+
+
+### Features
+
+* enhance release workflow to extract and format JIRA IDs in output ([b495cd0](https://github.com/NecimDurmaz/github-tag-action-example/commit/b495cd0b08196cc3534643aae63db3a5263b4b33))
+
 # [4.61.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.60.0...v4.61.0) (2025-10-24)
 
 
