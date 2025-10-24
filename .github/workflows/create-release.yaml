@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  print-parameters:
   semantic-release:
     name: Semantic Release
     uses: ./.github/workflows/semantic-release.yaml@main
