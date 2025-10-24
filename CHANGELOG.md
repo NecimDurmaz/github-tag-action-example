@@ -1,3 +1,25 @@
+# [4.52.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.2...v4.52.0) (2025-10-24)
+
+
+### Bug Fixes
+
+* correct version display typo in main.ts ([c475bdc](https://github.com/NecimDurmaz/github-tag-action-example/commit/c475bdc0d92780b5033da42e60bc1fbf982f3b09))
+* enable credential persistence for GitHub Actions in semantic-release.yaml ([2d161df](https://github.com/NecimDurmaz/github-tag-action-example/commit/2d161df354f5ee79518994b8be73644f984b219a))
+* update .releaserc to change branch configuration for prereleases ([6b01605](https://github.com/NecimDurmaz/github-tag-action-example/commit/6b0160560368540f4dc3ace394c3ec17fe0fb41a))
+* update .releaserc to include 'test' branch as a prerelease ([1f8bb43](https://github.com/NecimDurmaz/github-tag-action-example/commit/1f8bb4313064648cf8c81e9c235fccf3b77297b7))
+* update angusVersion tag to include additional version details ([cca6d7a](https://github.com/NecimDurmaz/github-tag-action-example/commit/cca6d7a67050f9d64cab8e27c95f843bb8db01f1))
+* update angusVersion tag to include additional version details ([0017b42](https://github.com/NecimDurmaz/github-tag-action-example/commit/0017b424855cbe767406cc4c83218134c754655f))
+* update application name to "Angular Test" in main.ts ([469c94a](https://github.com/NecimDurmaz/github-tag-action-example/commit/469c94a3beda579402efab6c95818e07130bb1d3))
+* update application name to "Angular Test12" in main.ts ([14c7573](https://github.com/NecimDurmaz/github-tag-action-example/commit/14c7573048aa4eab7f9370a3f902d739d33e068a))
+* update credential persistence setting in semantic-release.yaml ([5873e92](https://github.com/NecimDurmaz/github-tag-action-example/commit/5873e92187dabf8425354ad2022dc73d68ab1bd2))
+* update main branch configuration to enable release mode in .releaserc ([815768a](https://github.com/NecimDurmaz/github-tag-action-example/commit/815768aab9561a00207352a4a5182515d8bedfd3))
+
+
+### Features
+
+* create .releaserc.json for semantic release configuration ([662ea4a](https://github.com/NecimDurmaz/github-tag-action-example/commit/662ea4a4ab9681d5e49eda2439052feba959fe8a))
+* update application name to "Angular Test1" in main.ts ([d7b7570](https://github.com/NecimDurmaz/github-tag-action-example/commit/d7b7570b58048bc9c6ab2d18534b264388d3a139))
+
 # [4.52.0-main.3](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0-main.2...v4.52.0-main.3) (2025-10-24)
 
 
