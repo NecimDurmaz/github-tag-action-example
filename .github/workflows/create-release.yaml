@@ -4,29 +4,25 @@ on:
   workflow_dispatch:
 
 jobs:
-  print-parameters:
   semantic-release:
     name: Semantic Release
-    uses: ./.github/workflows/semantic-release.yaml@main
-    secrets: inherit
+    uses: ./.github/workflows/semantic-release.yaml
 
   build-docker:
     needs: semantic-release
     if: needs.semantic-release.outputs.new_release_published == 'true'
     name: Build & Push Docker
-    uses: ./.github/workflows/build-docker.yaml@main
+    uses: ./.github/workflows/build-docker.yaml
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
-    secrets: inherit
 
   create-branch:
     needs: semantic-release
     if: needs.semantic-release.outputs.new_release_published == 'true'
     name: Create Release Branch
-    uses: ./.github/workflows/create-branch.yaml@main
+    uses: ./.github/workflows/create-branch.yaml
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
-    secrets: inherit
 
   #  deploy:
   #    needs: [ semantic-release, build-docker ]
