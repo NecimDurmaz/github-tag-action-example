@@ -91,7 +91,7 @@ function fileReplace(filePath: string, replaceArray: Array<[string | RegExp, str
 const path = require('path');
 
 function pickIndexHtml(): string | null {
-    return `dist/browser/index.html`;
+    return `dist/demo/browser/index.html`;
     // const candidates = [
     //     'dist/demo/browser/index.html',
     //     'dist/demo/index.html',
