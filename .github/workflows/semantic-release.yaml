@@ -16,14 +16,15 @@ jobs:
     outputs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
-      changelog_diff: ${{ steps.get_changelog.outputs.changelog_diff }}
+      changelog_diff: ${{ steps.get_changelog.outputs.changelog_diff }}  # Burada changelog_diff output'u alınıyor
+
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
+          persist-credentials: false
 
       - uses: actions/setup-node@v3
         with:
@@ -45,25 +46,6 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create .releaserc.json
-        run: |
-          cat > .releaserc.json << 'EOF'
-          {
-            "branches": ["main"],
-            "plugins": [
-              "@semantic-release/commit-analyzer",
-              "@semantic-release/release-notes-generator",
-              "@semantic-release/changelog",
-              ["@semantic-release/exec", {
-                "prepareCmd": "sed -i \"s/tag: \\\"angus:[^\\\"]*\\\"/tag: \\\"angus:v${nextRelease.version}\\\"/g\" src/index.html"
-              }],
-              "@semantic-release/git",
-              "@semantic-release/github",
-              "@semantic-release/npm"
-            ]
-          }
-          EOF
 
       - name: Do something when a new release published
         if: steps.semantic.outputs.new_release_published == 'true'
@@ -100,8 +82,8 @@ jobs:
       - name: Print parameters before sending to Teams
         run: |
           echo "Repository: ${{ github.repository }}"
-          echo "New release version: ${{ needs.semantic-release.outputs.new_release_version }}"
-          echo "CHANGELOG diff: ${{ needs.semantic-release.outputs.changelog_diff }}"
+          echo "New release version: ${{ steps.semantic.outputs.new_release_version }}"
+          echo "CHANGELOG diff: ${{ needs.semantic-release.outputs.changelog_diff  }}"
 
   create-branch:
     needs: semantic-release
@@ -113,7 +95,7 @@ jobs:
           fetch-depth: 0
       - name: Create release branch
         env:
-          VERSION: ${{ needs.semantic-release.outputs.new_release_version }}
+          VERSION: ${{ needs.semantic-release.outputs.new_release_version  }}
         run: |
           BRANCH_NAME="release-v$VERSION"
           echo "Creating branch $BRANCH_NAME"
