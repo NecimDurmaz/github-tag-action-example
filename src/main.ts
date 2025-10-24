@@ -7,7 +7,7 @@ import {environment} from "./environments/enviroments";
 
 
     template: `
-        <h1>Hello from {{ name }}! {{ versionNo }}</h1>
+        123        <h1>Hello from {{ name }}! {{ versionNo }}</h1>
         <H2>123asd</H2>
         h3>Version: {{ version }}
 
