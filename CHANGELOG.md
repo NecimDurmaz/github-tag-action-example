@@ -1,3 +1,10 @@
+# [4.73.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.72.0...v4.73.0) (2025-10-24)
+
+
+### feat
+
+* enhance JIRA ID extraction and commit transformation in release notes ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/9add20bc41e65ea8c3a99a5fd05bc7db8e819420))
+
 # [4.72.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.71.0...v4.72.0) (2025-10-24)
 
 
