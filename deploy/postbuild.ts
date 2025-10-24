@@ -91,49 +91,50 @@ function fileReplace(filePath: string, replaceArray: Array<[string | RegExp, str
 const path = require('path');
 
 function pickIndexHtml(): string | null {
-    const candidates = [
-        'dist/demo/browser/index.html',
-        'dist/demo/index.html',
-        'dist/browser/index.html',
-        'dist/index.html',
-    ];
-
-    for (const p of candidates) {
-        if (fs.existsSync(p)) {
-            console.log(`[post-build] Using target file: ${p}`);
-            return p;
-        }
-    }
-
-    console.warn('[post-build] ❌ index.html not found in expected locations.');
-
-    // dist klasörünü listele
-    const distPath = path.resolve('dist');
-    if (fs.existsSync(distPath)) {
-        console.log('\n[post-build] Available files under dist/:');
-        const listFiles = (dir: string, prefix = '') => {
-            const items = fs.readdirSync(dir);
-            for (const item of items) {
-                const fullPath = path.join(dir, item);
-                const stat = fs.statSync(fullPath);
-                if (stat.isDirectory()) {
-                    console.log(prefix + '📁 ' + item);
-                    listFiles(fullPath, prefix + '  ');
-                } else {
-                    console.log(prefix + '📄 ' + item);
-                }
-            }
-        };
-        listFiles(distPath);
-    } else {
-        console.warn('[post-build] dist directory not found.');
-    }
-
-    return null;
+    return `dist/browser/index.html`;
+    // const candidates = [
+    //     'dist/demo/browser/index.html',
+    //     'dist/demo/index.html',
+    //     'dist/browser/index.html',
+    //     'dist/index.html',
+    // ];
+    //
+    // for (const p of candidates) {
+    //     if (fs.existsSync(p)) {
+    //         console.log(`[post-build] Using target file: ${p}`);
+    //         return p;
+    //     }
+    // }
+    //
+    // console.warn('[post-build] ❌ index.html not found in expected locations.');
+    //
+    // // dist klasörünü listele
+    // const distPath = path.resolve('dist');
+    // if (fs.existsSync(distPath)) {
+    //     console.log('\n[post-build] Available files under dist/:');
+    //     const listFiles = (dir: string, prefix = '') => {
+    //         const items = fs.readdirSync(dir);
+    //         for (const item of items) {
+    //             const fullPath = path.join(dir, item);
+    //             const stat = fs.statSync(fullPath);
+    //             if (stat.isDirectory()) {
+    //                 console.log(prefix + '📁 ' + item);
+    //                 listFiles(fullPath, prefix + '  ');
+    //             } else {
+    //                 console.log(prefix + '📄 ' + item);
+    //             }
+    //         }
+    //     };
+    //     listFiles(distPath);
+    // } else {
+    //     console.warn('[post-build] dist directory not found.');
+    // }
+    //
+    // return null;
 }
 
 const target = pickIndexHtml();
-console.log('post-build script finished.', target);
+console.log('Target index.html:', target);
 if (target) {
     buildStampHtml(target);
 }
