@@ -1,3 +1,10 @@
+# [4.74.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.73.0...v4.74.0) (2025-10-24)
+
+
+### Features
+
+* add semantic-release configuration for branch management and plugins ([c1089b1](https://github.com/NecimDurmaz/github-tag-action-example/commit/c1089b1513b15c816e37417ab7d806a9d5faa481))
+
 # [4.73.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.72.0...v4.73.0) (2025-10-24)
 
 
