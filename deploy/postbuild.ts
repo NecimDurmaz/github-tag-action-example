@@ -69,8 +69,18 @@ function buildStampHtml(filePath: string) {
 function fileReplace(filePath: string, replaceArray: Array<[string | RegExp, string]>) {
     try {
         let contents = fs.readFileSync(filePath, 'utf-8');
-        for (const [str1, str2] of replaceArray) {
-            contents = contents.replace(str1, str2);
+        for (const [pattern, replacement] of replaceArray) {
+            if (pattern instanceof RegExp) {
+                if (pattern.test(contents)) {
+                    console.log(`[post-build] Found match for pattern: ${pattern}`);
+                }
+                contents = contents.replace(pattern, replacement);
+            } else {
+                if (contents.includes(pattern)) {
+                    console.log(`[post-build] Found match for string: ${pattern}`);
+                }
+                contents = contents.replace(pattern, replacement);
+            }
         }
         fs.writeFileSync(filePath, contents, {encoding: 'utf-8'});
     } catch (e: any) {
@@ -78,4 +88,4 @@ function fileReplace(filePath: string, replaceArray: Array<[string | RegExp, str
     }
 }
 
-buildStampHtml('dist/AngusFrontEnd/index.html');
+buildStampHtml('dist/demo/index.html');
