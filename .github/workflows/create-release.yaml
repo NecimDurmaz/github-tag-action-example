@@ -1,0 +1,67 @@
+name: Create Release & Build Docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  semantic-release:
+    name: Semantic Release
+    uses: ./.github/workflows/semantic-release.yaml@main
+    secrets: inherit
+
+  build-docker:
+    needs: semantic-release
+    if: needs.semantic-release.outputs.new_release_published == 'true'
+    name: Build & Push Docker
+    uses: ./.github/workflows/build-docker.yaml@main
+    with:
+      version: ${{ needs.semantic-release.outputs.new_release_version }}
+    secrets: inherit
+
+  create-branch:
+    needs: semantic-release
+    if: needs.semantic-release.outputs.new_release_published == 'true'
+    name: Create Release Branch
+    uses: ./.github/workflows/create-branch.yaml@main
+    with:
+      version: ${{ needs.semantic-release.outputs.new_release_version }}
+    secrets: inherit
+
+  #  deploy:
+  #    needs: [ semantic-release, build-docker ]
+  #    if: needs.semantic-release.outputs.new_release_published == 'true'
+  #    name: Deploy to Kubernetes
+  #    strategy:
+  #      matrix:
+  #        obj:
+  #          - namespace: elektraweb
+  #            deployment: angus
+  #            container: angus
+  #          - namespace: angus
+  #            deployment: angus
+  #            container: angus
+  #    uses: travelaps/k8s-rollout/.github/workflows/rollout-azure.yml@main
+  #    with:
+  #      namespace: ${{ matrix.obj.namespace }}
+  #      deploymentSelector: k8s-app=${{ matrix.obj.deployment }}
+  #      containerName: ${{ matrix.obj.container }}
+  #      containerImage: ghcr.io/${{ vars.CRNAME }}/${{ matrix.obj.container }}:v${{ needs.semantic-release.outputs.new_release_version }}
+
+  call-notify:
+    needs: [ semantic-release, build-docker, deploy ]
+    if: needs.semantic-release.outputs.new_release_published == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Teams
+        uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
+        with:
+          message: |
+            # 📁 **${{ github.repository }}** 
+            ## 🚀 New release published: **${{ needs.semantic-release.outputs.new_release_version }}**
+            ---
+            # 📝 **Release Notes:** 
+               ${{ needs.semantic-release.outputs.changelog_diff }}
+            ---
+            ✅ Docker image built and deployed successfully!
+        secrets:
+          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
