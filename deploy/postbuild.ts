@@ -1,28 +1,65 @@
-const fs = require("fs");
-const path = require("path");
+const yargs = require('yargs');
+const fs = require('fs');
 
-// Build sonrası dosyayı bulma
-const indexPath = path.join(__dirname, "dist", "index.html"); // dist klasörü, build çıktınızın bulunduğu klasör olmalı
+const args = yargs.option('deploy', {default: true}).argv;
+const gitCommit = (process.env as any).GIT_COMMIT;
+const buildTag = (process.env as any).BUILD_TAG;
 
-// Yeni versiyon bilgisini almak
-const version = process.env.VERSION; // Bu, GitHub Action'dan alacağımız yeni versiyon bilgisi
-
-// Dosya okuma ve yazma
-fs.readFile(indexPath, "utf8", (err, data) => {
-  if (err) {
-    console.error("Error reading index.html:", err);
-    return;
-  }
-
-  // index.html içindeki versiyon bilgisini güncelleme
-  const updatedData = data.replace(/<meta name="version" content=".*">/, `<meta name="version" content="${version}">`);
-
-  // Güncellenmiş içeriği dosyaya yazma
-  fs.writeFile(indexPath, updatedData, "utf8", (err) => {
-    if (err) {
-      console.error("Error writing to index.html:", err);
+function buildStampHtml(filePath: string) {
+    // tag:    '${BUILD_TAG}'
+    // at:     new Date('$(date --iso-8601=seconds)')
+    // commit: '${GIT_COMMIT}'
+    let tag;
+    let commit;
+    const timestamp = new Date().getTime();
+    if (args.hasOwnProperty('commit') && args.hasOwnProperty('tag')) {
+        commit = args.commit;
+        tag = args.tag;
     } else {
-      console.log("index.html version updated successfully!");
+        console.warn(
+            'No --commit and --tag parameters. Looking for environment variables GIT_COMMIT and BUILD_TAG'
+        );
+        if (gitCommit && buildTag) {
+            commit = gitCommit;
+            tag = buildTag;
+        } else {
+            console.warn(
+                'No GIT_COMMIT and BUILD_TAG environment variables. Defaulting to manual build'
+            );
+            tag = 'manual-build-' + timestamp;
+            commit = 'manual-build-' + timestamp;
+        }
     }
-  });
-});
+    fileReplace(filePath, [
+        // Yorum satırını güncelle
+        [
+            /\/\*\s*--\s* BUILD STAMP\s*--\s*\*\//,
+            `/*
+    ANGUS BUILD STAMP
+    tag: ${tag}
+    commit: ${commit}
+    timestamp: ${new Date(timestamp).toISOString()}
+      */
+      window.angusVersion = {
+        tag: '${tag}',
+        commit: '${commit}',
+        timestamp: '${new Date(timestamp).toISOString()}'
+      };
+  `,
+        ],
+    ]);
+}
+
+function fileReplace(filePath: string, replaceArray: Array<[string | RegExp, string]>) {
+    try {
+        let contents = fs.readFileSync(filePath, 'utf-8');
+        for (const [str1, str2] of replaceArray) {
+            contents = contents.replace(str1, str2);
+        }
+        fs.writeFileSync(filePath, contents, {encoding: 'utf-8'});
+    } catch (e: any) {
+        console.warn('post-build', filePath, 'replace failed.', e.message);
+    }
+}
+
+buildStampHtml('dist/AngusFrontEnd/index.html');

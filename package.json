@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ts-node deploy/postbuild.ts",
     "prepare": "husky"
   },
   "dependencies": {
