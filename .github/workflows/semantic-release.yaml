@@ -46,21 +46,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update version in src/index.html
-        if: steps.semantic.outputs.new_release_published == 'true'
+      - name: Create .releaserc.json
         run: |
-          VERSION=${{ steps.semantic.outputs.new_release_version }}
-          sed -i "s/tag: \"angus:[^\"]*\"/tag: \"angus:v$VERSION\"/g" src/index.html
-          echo "Updated version to: angus:v$VERSION"
-
-      - name: Commit and push version update
-        if: steps.semantic.outputs.new_release_published == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add src/index.html
-          git commit -m "chore: update version tag to ${{ steps.semantic.outputs.new_release_version }} [skip ci]"
-          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+          cat > .releaserc.json << 'EOF'
+          {
+            "branches": ["main"],
+            "plugins": [
+              "@semantic-release/commit-analyzer",
+              "@semantic-release/release-notes-generator",
+              "@semantic-release/changelog",
+              ["@semantic-release/exec", {
+                "prepareCmd": "sed -i \"s/tag: \\\"angus:[^\\\"]*\\\"/tag: \\\"angus:v${nextRelease.version}\\\"/g\" src/index.html"
+              }],
+              "@semantic-release/git",
+              "@semantic-release/github",
+              "@semantic-release/npm"
+            ]
+          }
+          EOF
 
       - name: Do something when a new release published
         if: steps.semantic.outputs.new_release_published == 'true'
