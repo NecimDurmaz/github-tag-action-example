@@ -1,0 +1,22 @@
+{
+  "branches": [
+  "dev",
+  "main",
+   {"name":"release-v**","prerelease":true},
+   {"name":"test","prerelease":true}
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    "@semantic-release/changelog",
+    "@semantic-release/git",
+    "@semantic-release/exec",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ]
+  ]
+}
