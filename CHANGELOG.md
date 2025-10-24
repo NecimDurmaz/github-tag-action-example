@@ -1,3 +1,10 @@
+## [4.52.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.0...v4.52.1) (2025-10-24)
+
+
+### Bug Fixes
+
+* simplify main branch configuration in .releaserc ([ee3b905](https://github.com/NecimDurmaz/github-tag-action-example/commit/ee3b90559ced8702363e7a0ae0c0d2f59daf719a))
+
 # [4.52.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.2...v4.52.0) (2025-10-24)
 
 
