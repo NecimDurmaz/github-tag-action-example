@@ -1,3 +1,15 @@
+# [4.68.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.67.0...v4.68.0) (2025-10-24)
+
+
+### chore
+
+* remove version placeholder from index.html ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/f5b43f1143f4a368cced6d7e9128a81455abb523))
+
+
+### feat
+
+* add logging for commit transformation and JIRA ID extraction ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/7baf01d58971920ed18384d21dbe1d48bdab8f11))
+
 # [4.67.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.66.0...v4.67.0) (2025-10-24)
 
 
