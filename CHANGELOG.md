@@ -1,3 +1,10 @@
+# [4.56.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.55.0...v4.56.0) (2025-10-24)
+
+
+### Features
+
+* update build-docker workflow to enable image push and modify build tags ([4feb531](https://github.com/NecimDurmaz/github-tag-action-example/commit/4feb531cb6997f86914c4e8b75a536d3e8267878))
+
 # [4.55.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.54.0...v4.55.0) (2025-10-24)
 
 
