@@ -7,6 +7,10 @@ on:
         required: true
         type: string
         description: "The version to build"
+      crname:
+        required: true
+        type: string
+        description: "Container registry owner/org (lowercase)"
 
 jobs:
   build-docker:
@@ -34,7 +38,7 @@ jobs:
             GIT_COMMIT=${{ github.sha }}
             BUILD_TAG=github-tag-action-example:v${{ inputs.version }}
           tags: |
-            ghcr.io/${{ vars.CRNAME }}/github-tag-action-example:latest
-            ghcr.io/${{ vars.CRNAME }}/github-tag-action-example:v${{ inputs.version }}
+            ghcr.io/${{ inputs.crname }}/github-tag-action-example:latest
+            ghcr.io/${{ inputs.crname }}/github-tag-action-example:v${{ inputs.version }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
