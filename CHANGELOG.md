@@ -1,3 +1,11 @@
+## [4.51.3-main.3](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.2...v4.51.3-main.3) (2025-10-24)
+
+
+### Bug Fixes
+
+* update angusVersion tag to include additional version details ([cca6d7a](https://github.com/NecimDurmaz/github-tag-action-example/commit/cca6d7a67050f9d64cab8e27c95f843bb8db01f1))
+* update application name to "Angular Test" in main.ts ([469c94a](https://github.com/NecimDurmaz/github-tag-action-example/commit/469c94a3beda579402efab6c95818e07130bb1d3))
+
 ## [4.51.3-main.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.1...v4.51.3-main.2) (2025-04-16)
 
 
