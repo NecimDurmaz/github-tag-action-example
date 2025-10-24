@@ -25,7 +25,7 @@ import {environment} from "./environments/enviroments";
 export class App {
     versionNo: string;
     version = environment.version;
-    name = "Angular";
+    name = "Angular Test";
 
     constructor() {
         this.versionNo = (window as any)?.angusVersion?.tag?.split(":")?.[1];
