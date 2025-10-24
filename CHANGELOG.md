@@ -1,3 +1,10 @@
+# [4.72.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.71.0...v4.72.0) (2025-10-24)
+
+
+### feat
+
+* update conventional-changelog-angular to version 8.1.0 ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/66b67da5bdfa66ea9a362b3073886b204af6ba73))
+
 # [4.71.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.70.0...v4.71.0) (2025-10-24)
 
 
