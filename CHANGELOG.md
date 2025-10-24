@@ -1,3 +1,10 @@
+# [4.55.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.54.0...v4.55.0) (2025-10-24)
+
+
+### Features
+
+* update build-docker workflow to disable push and export image as tar ([c6cb55b](https://github.com/NecimDurmaz/github-tag-action-example/commit/c6cb55bc9790f58c7058c2d9997380e50c19ad3d))
+
 # [4.54.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.53.0...v4.54.0) (2025-10-24)
 
 
