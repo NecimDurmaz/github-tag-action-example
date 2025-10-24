@@ -1,3 +1,10 @@
+# [4.63.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.62.0...v4.63.0) (2025-10-24)
+
+
+### feat
+
+* add release notes transformer for JIRA ID extraction and formatting ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/31481a6a989551892b3277013f6a8d253e39f04e))
+
 # [4.62.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.61.0...v4.62.0) (2025-10-24)
 
 
