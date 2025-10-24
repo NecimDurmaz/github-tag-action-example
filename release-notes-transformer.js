@@ -1,4 +1,5 @@
 module.exports = (commit) => {
+    console.log('Transforming commit:', commit);
     // JIRA ID'lerini bul ve formatla
     const jiraRegex = /\[([A-Z]+-[0-9]+)\]/g;
     const jiraIds = [];
@@ -16,9 +17,11 @@ module.exports = (commit) => {
         .replace(/^\w+(\(.+\))?!?:\s+/, '')
         .replace(/\s*JIRA\s*\[[\w-]+\]\s*/g, '')
         .trim();
+    console.log('Extracted subject:', subject);
 
     // JIRA ID'leri varsa subject'e ekle
     if (jiraIds.length > 0) {
+        console.log('Found JIRA IDs:', jiraIds);
         const jiraLinks = jiraIds
             .map(id => `[${id}](https://elektrawebpms.atlassian.net/browse/${id})`)
             .join(', ');
