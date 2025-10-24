@@ -45,20 +45,18 @@ jobs:
   #      containerImage: ghcr.io/${{ vars.CRNAME }}/${{ matrix.obj.container }}:v${{ needs.semantic-release.outputs.new_release_version }}
 
   call-notify:
-    needs: [ semantic-release, build-docker, deploy ]
+    needs: [ semantic-release, build-docker , deploy ]
     if: needs.semantic-release.outputs.new_release_published == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Notify Teams
-        uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
-        with:
-          message: |
-            # 📁 **${{ github.repository }}** 
-            ## 🚀 New release published: **${{ needs.semantic-release.outputs.new_release_version }}**
-            ---
-            # 📝 **Release Notes:** 
-               ${{ needs.semantic-release.outputs.changelog_diff }}
-            ---
-            ✅ Docker image built and deployed successfully!
-        secrets:
-          TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
+    uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
+    with:
+      message: |
+        # 📁 **${{ github.repository }}** 
+        ## 🚀 New release published: **${{ needs.semantic-release.outputs.new_release_version }}**
+        ---
+        # 📝 **Release Notes:** 
+           ${{ needs.semantic-release.outputs.changelog_diff }}
+        ---
+        ✅ Docker image built and deployed successfully!
+    secrets:
+      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}  # <-- kapanış }} eklendi
+
