@@ -21,6 +21,9 @@ on:
       changelog_diff:
         description: "The changelog diff"
         value: ${{ jobs.semantic-release.outputs.changelog_diff }}
+      jira_ids:
+        description: "Extracted JIRA IDs"
+        value: ${{ jobs.semantic-release.outputs.jira_ids }}
 
 jobs:
   semantic-release:
@@ -36,6 +39,7 @@ jobs:
       new_release_minor_version: ${{ steps.semantic.outputs.new_release_minor_version }}
       new_release_patch_version: ${{ steps.semantic.outputs.new_release_patch_version }}
       changelog_diff: ${{ steps.get_changelog.outputs.changelog_diff }}
+      jira_ids: ${{ steps.extract_jira.outputs.jira_ids }}
 
     steps:
       - name: Checkout
@@ -77,17 +81,31 @@ jobs:
         id: get_changelog
         run: |
           echo "Getting last CHANGELOG diff..."
-
-          # Sadece eklenen satırları al, ilk satırı atla, baştaki '+' işaretlerini kaldır, \n ekle
           changelog=$(git diff HEAD~1 HEAD -- CHANGELOG.md | grep '^+' | tail -n +3 | sed 's/^+//' | sed 's/$/\\n/')
-
-          # Son satırı sil
           changelog=$(echo "$changelog" | head -n -1)
-
-          # Konsola yaz
           echo "$changelog"
-          
-          # GitHub output olarak aktar
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           echo "$changelog" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Extract JIRA IDs
+        id: extract_jira
+        run: |
+          # Git log'dan JIRA ID'lerini bul
+          jira_ids=$(git log HEAD~1..HEAD --pretty=%B | grep -oE '\[([A-Z]+-[0-9]+)\]' | sort -u | sed 's/\[\(.*\)\]/\1/')
+          
+          # Eğer JIRA ID bulunduysa, formatla
+          if [ -n "$jira_ids" ]; then
+            formatted_jiras=""
+            while IFS= read -r id; do
+              if [ -n "$id" ]; then
+                formatted_jiras+="[$id](http://elektrawebpms.atlassian.net/browse/$id)"$'\n'
+              fi
+            done <<< "$jira_ids"
+          
+            echo "jira_ids<<EOF" >> $GITHUB_OUTPUT
+            echo "$formatted_jiras" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "jira_ids=" >> $GITHUB_OUTPUT
+          fi

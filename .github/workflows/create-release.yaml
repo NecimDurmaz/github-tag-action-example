@@ -15,7 +15,7 @@ jobs:
     uses: ./.github/workflows/build-docker.yaml
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
-      crname: necimdurmaz # TODO
+      crname: necimdurmaz
 
   create-branch:
     needs: semantic-release
@@ -57,7 +57,8 @@ jobs:
         # 📝 **Release Notes:** 
            ${{ needs.semantic-release.outputs.changelog_diff }}
         ---
-        ✅ Docker image built and deployed successfully!
-    secrets:
-      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}  # <-- kapanış }} eklendi
+        # 🔗 **JIRA IDs**
+        ${{ needs.semantic-release.outputs.jira_ids }}
 
+    secrets:
+      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
