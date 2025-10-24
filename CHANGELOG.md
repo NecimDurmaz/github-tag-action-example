@@ -1,3 +1,10 @@
+# [4.60.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.59.0...v4.60.0) (2025-10-24)
+
+
+### Features
+
+* add nginx configuration for serving application files ([49111de](https://github.com/NecimDurmaz/github-tag-action-example/commit/49111de34f693260ebbd6b66a9a722ee77a8bd7e))
+
 # [4.59.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.58.0...v4.59.0) (2025-10-24)
 
 
