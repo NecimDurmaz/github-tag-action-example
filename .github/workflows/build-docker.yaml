@@ -33,7 +33,6 @@ jobs:
           build-args: |
             GIT_COMMIT=${{ github.sha }}
             BUILD_TAG=angus:v${{ inputs.version }}
-            TRAVELAPS_PACKAGES_GLOBAL_PAT=${{ secrets.PACKAGES_GLOBAL_PAT }}
           tags: |
             ghcr.io/${{ vars.CRNAME }}/angus:latest
             ghcr.io/${{ vars.CRNAME }}/angus:v${{ inputs.version }}
