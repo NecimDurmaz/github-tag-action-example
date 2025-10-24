@@ -103,7 +103,8 @@ jobs:
           git push origin "$BRANCH_NAME"
 
   call-notify:
-    needs: semantic-release
+    needs: [ semantic-release, build-docker ]  # deploy kapalıysa buradan çıkarın
+    if: needs.semantic-release.outputs.new_release_published == 'true'
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
       message: |
@@ -112,5 +113,7 @@ jobs:
         ---
         # 📝 **Release Notes:** 
            ${{ needs.semantic-release.outputs.changelog_diff }}
+        ---
+        ✅ Docker image built and deployed successfully!
     secrets:
-      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
+      TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}  # <-- kapanış }} eklendi
