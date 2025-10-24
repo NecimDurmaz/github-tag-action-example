@@ -1,3 +1,11 @@
+# [4.71.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.70.0...v4.71.0) (2025-10-24)
+
+
+### feat
+
+* enhance JIRA ID extraction in semantic-release ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/e7a64162b5a91280504e0dbcae4672cfe670c69d))
+* update index.html path in post-build script to point to demo directory ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/9ece6b9b27f285fd99adef7c67c46439f96d4d31))
+
 # [4.70.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.69.0...v4.70.0) (2025-10-24)
 
 
