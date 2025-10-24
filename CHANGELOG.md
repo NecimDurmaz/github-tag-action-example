@@ -1,3 +1,11 @@
+# [4.61.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.60.0...v4.61.0) (2025-10-24)
+
+
+### Features
+
+* add support for multi-platform builds in Docker workflow ([b353b86](https://github.com/NecimDurmaz/github-tag-action-example/commit/b353b8604a651c91fd548d13b9d3f973333cfdeb))
+* update create-release workflow to improve release process and notifications ([a63c080](https://github.com/NecimDurmaz/github-tag-action-example/commit/a63c080dbe6cbbe62d5d9bee0375828b2b06a6c0))
+
 # [4.60.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.59.0...v4.60.0) (2025-10-24)
 
 
