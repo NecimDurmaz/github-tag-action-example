@@ -92,7 +92,7 @@ jobs:
         id: extract_jira
         run: |
           set -euo pipefail
-          
+
           # Bir önceki tag
           prev_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
           if [ -n "$prev_tag" ]; then
@@ -102,32 +102,33 @@ jobs:
             echo "No previous tag found. Scanning last 200 commits as fallback."
             range="--max-count=200"
           fi
-          
+
           echo "🔍 Checking commits in range: $range"
           echo "----------------------------------------"
           git log $range --oneline --decorate
           echo "----------------------------------------"
-          
+
           # Tüm commit mesajları
           commit_messages=$(git log $range --pretty=%B)
-          
-          # JIRA ID'lerini yakala (kelime sınırı)
+
+          # JIRA ID'lerini yakala (benzersiz ve sıralı)
           jira_ids=$(printf '%s' "$commit_messages" | grep -oE '\b[A-Z][A-Z0-9]+-[0-9]+\b' | sort -u)
-          
+
           if [ -n "$jira_ids" ]; then
             echo "✅ Found JIRA IDs:"
             echo "$jira_ids"
-          
-            # Her ID'yi markdown link'e çevir, satır satır
+
+            # Markdown link formatı + virgülle ayır
             formatted_jiras=$(
               printf '%s\n' "$jira_ids" \
-              | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#'
+              | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#' \
+              | paste -sd ', '
             )
-          
+
             # Çok satırlı output'u temiz şekilde yaz
             {
               echo "jira_ids<<EOF"
-              printf '%s\n' "$formatted_jiras"
+              echo "$formatted_jiras"
               echo "EOF"
             } >> "$GITHUB_OUTPUT"
           else
