@@ -1,3 +1,10 @@
+# [4.58.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.57.0...v4.58.0) (2025-10-24)
+
+
+### Features
+
+* update Dockerfile to use nginx for serving built files ([4e52856](https://github.com/NecimDurmaz/github-tag-action-example/commit/4e52856330e585b8e90e1a86831c44612e32fa61))
+
 # [4.57.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.56.0...v4.57.0) (2025-10-24)
 
 
