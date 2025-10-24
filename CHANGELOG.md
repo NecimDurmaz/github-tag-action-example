@@ -1,3 +1,10 @@
+# [4.52.0-main.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.3...v4.52.0-main.1) (2025-10-24)
+
+
+### Features
+
+* update application name to "Angular Test1" in main.ts ([d7b7570](https://github.com/NecimDurmaz/github-tag-action-example/commit/d7b7570b58048bc9c6ab2d18534b264388d3a139))
+
 ## [4.51.3-main.3](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.51.3-main.2...v4.51.3-main.3) (2025-10-24)
 
 
