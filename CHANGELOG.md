@@ -1,3 +1,12 @@
+# [4.54.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.53.0...v4.54.0) (2025-10-24)
+
+
+### Features
+
+* refactor call-notify job to streamline notification steps ([694f79d](https://github.com/NecimDurmaz/github-tag-action-example/commit/694f79d45d4cb7e96521e6dd39a4cf480e491e9a))
+* update call-notify job dependencies and enhance release message ([432dd89](https://github.com/NecimDurmaz/github-tag-action-example/commit/432dd893757d5a1bc2f09b678a3ad312902aab40))
+* update call-notify job dependencies to remove unnecessary steps ([20ee098](https://github.com/NecimDurmaz/github-tag-action-example/commit/20ee098338dc5600f0acd45b628eb279d352f46b))
+
 # [4.53.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.52.1...v4.53.0) (2025-10-24)
 
 
