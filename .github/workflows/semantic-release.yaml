@@ -91,11 +91,10 @@ jobs:
       - name: Extract JIRA IDs (since previous release)
         id: extract_jira
         run: |
-          set -e
+          set -euo pipefail
           
-          # Bir önceki tag'i bul
+          # Bir önceki tag
           prev_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          
           if [ -n "$prev_tag" ]; then
             echo "Previous tag: $prev_tag"
             range="$prev_tag..HEAD"
@@ -109,27 +108,29 @@ jobs:
           git log $range --oneline --decorate
           echo "----------------------------------------"
           
-          # Commit mesajlarının tamamını al
+          # Tüm commit mesajları
           commit_messages=$(git log $range --pretty=%B)
-          echo "📝 Full commit messages:"
-          echo "$commit_messages"
-          echo "----------------------------------------"
           
-          # JIRA ID’lerini çıkar 
-          jira_ids=$(echo "$commit_messages" | grep -oE '([A-Z][A-Z0-9]+-[0-9]+)' | sort -u)
+          # JIRA ID'lerini yakala (kelime sınırı)
+          jira_ids=$(printf '%s' "$commit_messages" | grep -oE '\b[A-Z][A-Z0-9]+-[0-9]+\b' | sort -u)
           
           if [ -n "$jira_ids" ]; then
             echo "✅ Found JIRA IDs:"
             echo "$jira_ids"
-            formatted_jiras=""
-            while IFS= read -r id; do
-              [ -n "$id" ] && formatted_jiras+="[$id](https://elektrawebpms.atlassian.net/browse/$id)$'\n'"
-            done <<< "$jira_ids"
           
-            echo "jira_ids<<EOF" >> $GITHUB_OUTPUT
-            echo "$formatted_jiras" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
+            # Her ID'yi markdown link'e çevir, satır satır
+            formatted_jiras=$(
+              printf '%s\n' "$jira_ids" \
+              | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#'
+            )
+          
+            # Çok satırlı output'u temiz şekilde yaz
+            {
+              echo "jira_ids<<EOF"
+              printf '%s\n' "$formatted_jiras"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
           else
             echo "⚠️ No JIRA IDs found."
-            echo "jira_ids=" >> $GITHUB_OUTPUT
+            echo "jira_ids=" >> "$GITHUB_OUTPUT"
           fi
