@@ -1,3 +1,10 @@
+# [4.64.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.63.0...v4.64.0) (2025-10-24)
+
+
+### feat
+
+* enhance post-build process to include build stamp in index.html ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/358c9ea83f2db55e7c3de72e9903d0aa7443048b))
+
 # [4.63.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.62.0...v4.63.0) (2025-10-24)
 
 
