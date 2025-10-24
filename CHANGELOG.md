@@ -1,3 +1,10 @@
+# [4.69.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.68.0...v4.69.0) (2025-10-24)
+
+
+### feat
+
+* enhance post-build script to dynamically select index.html and log available files ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/69a351cd1723ed51b2e88756caa4d65bd53f4708))
+
 # [4.68.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.67.0...v4.68.0) (2025-10-24)
 
 
