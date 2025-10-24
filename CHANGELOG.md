@@ -1,3 +1,11 @@
+# [4.70.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.69.0...v4.70.0) (2025-10-24)
+
+
+### feat
+
+* add release configuration for semantic release with plugins ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/38415c927ea622e93f12384560bdffcc4c361bb5))
+* simplify index.html selection in post-build script ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/e21340c3428453f685c31d404299dbaffd241d76))
+
 # [4.69.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.68.0...v4.69.0) (2025-10-24)
 
 
