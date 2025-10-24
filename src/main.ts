@@ -13,7 +13,7 @@ import {environment} from "./environments/enviroments";
 
         h3>Version: {{ version }}
         h3>Version: {{ version }}
-        h3>Version: {{ version }}
+        h3>Versi123on: {{ version }}
         <a
                 target="_blank"
                 href="https://angular.dev/overview"
