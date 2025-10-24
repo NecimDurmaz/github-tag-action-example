@@ -1,3 +1,10 @@
+# [4.66.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.65.0...v4.66.0) (2025-10-24)
+
+
+### feat
+
+* add logging for environment variables and command line arguments in post-build script ([](https://github.com/NecimDurmaz/github-tag-action-example/commit/2d1f09e3d557f97054ac276ffd5818fae25551c2))
+
 # [4.65.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.64.0...v4.65.0) (2025-10-24)
 
 
