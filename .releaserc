@@ -1,7 +1,7 @@
 {
   "branches": [
   "dev",
-   {"name":"main","prerelease":true},
+   {"name":"main","release":true},
    {"name":"release-v**","prerelease":true},
    {"name":"test","prerelease":true}
   ],
