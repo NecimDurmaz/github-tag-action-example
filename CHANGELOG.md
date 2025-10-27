@@ -1,3 +1,10 @@
+## [4.78.1](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.78.0...v4.78.1) (2025-10-27)
+
+
+### Bug Fixes
+
+* correct HTML tag in main.ts for proper rendering of version information ([bc10a37](https://github.com/NecimDurmaz/github-tag-action-example/commit/bc10a3743fba2ef234e94cede81d246cad81db67))
+
 # [4.78.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.77.0...v4.78.0) (2025-10-27)
 
 
