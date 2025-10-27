@@ -9,7 +9,7 @@ import {environment} from "./environments/enviroments";
     template: `
         123        <h1>Hello from {{ name }}! {{ versionNo }}</h1>
         <H2>123asd</H2>
-        h3>Version: {{ version }}123
+        s        h3>Version: {{ version }}123123
 
         h3>Version: {{ version }}
         h3>Version: {{ version }}
