@@ -21,9 +21,6 @@ on:
       changelog_diff:
         description: "The changelog diff"
         value: ${{ jobs.semantic-release.outputs.changelog_diff }}
-      jira_ids:
-        description: "Extracted JIRA IDs"
-        value: ${{ jobs.semantic-release.outputs.jira_ids }}
 
 jobs:
   semantic-release:
@@ -39,7 +36,6 @@ jobs:
       new_release_minor_version: ${{ steps.semantic.outputs.new_release_minor_version }}
       new_release_patch_version: ${{ steps.semantic.outputs.new_release_patch_version }}
       changelog_diff: ${{ steps.get_changelog.outputs.changelog_diff }}
-      jira_ids: ${{ steps.extract_jira.outputs.jira_ids }}
 
     steps:
       - name: Checkout
@@ -87,51 +83,3 @@ jobs:
           echo "changelog_diff<<EOF" >> $GITHUB_OUTPUT
           echo "$changelog" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Extract JIRA IDs (since previous release)
-        id: extract_jira
-        run: |
-          set -euo pipefail
-
-          # Bir önceki tag
-          prev_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
-          if [ -n "$prev_tag" ]; then
-            echo "Previous tag: $prev_tag"
-            range="$prev_tag..HEAD"
-          else
-            echo "No previous tag found. Scanning last 200 commits as fallback."
-            range="--max-count=200"
-          fi
-
-          echo "🔍 Checking commits in range: $range"
-          echo "----------------------------------------"
-          git log $range --oneline --decorate
-          echo "----------------------------------------"
-
-          # Tüm commit mesajları
-          commit_messages=$(git log $range --pretty=%B)
-
-          # JIRA ID'lerini yakala (benzersiz ve sıralı)
-          jira_ids=$(printf '%s' "$commit_messages" | grep -oE '\b[A-Z][A-Z0-9]+-[0-9]+\b' | sort -u)
-
-          if [ -n "$jira_ids" ]; then
-            echo "✅ Found JIRA IDs:"
-            echo "$jira_ids"
-
-            # Markdown link formatı + virgülle ayır
-            formatted_jiras=$(
-              printf '%s\n' "$jira_ids" \
-              | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#' \
-              | paste -sd ', '
-            )
-
-            # Çok satırlı output'u temiz şekilde yaz
-            {
-              echo "jira_ids<<EOF"
-              echo "$formatted_jiras"
-              echo "EOF"
-            } >> "$GITHUB_OUTPUT"
-          else
-            echo "⚠️ No JIRA IDs found."
-            echo "jira_ids=" >> "$GITHUB_OUTPUT"
-          fi

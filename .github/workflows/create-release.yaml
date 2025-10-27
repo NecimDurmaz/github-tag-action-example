@@ -25,6 +25,12 @@ jobs:
     with:
       version: ${{ needs.semantic-release.outputs.new_release_version }}
 
+  extract-jira:
+    needs: semantic-release
+    if: needs.semantic-release.outputs.new_release_published == 'true'
+    name: Extract JIRA IDs
+    uses: ./.github/workflows/extract-jira.yaml
+
   #  deploy:
   #    needs: [ semantic-release, build-docker ]
   #    if: needs.semantic-release.outputs.new_release_published == 'true'
@@ -46,19 +52,19 @@ jobs:
   #      containerImage: ghcr.io/${{ vars.CRNAME }}/${{ matrix.obj.container }}:v${{ needs.semantic-release.outputs.new_release_version }}
 
   call-notify:
-    needs: [ semantic-release, build-docker ]
+    needs: [ semantic-release, build-docker, extract-jira ]
     if: needs.semantic-release.outputs.new_release_published == 'true'
     uses: NecimDurmaz/github-action-yamls/.github/workflows/notify-teams.yaml@main
     with:
       message: |
-        # 📁 **${{ github.repository }}** 
+        # 📦 **${{ github.repository }}** 
         ## 🚀 New release published: **${{ needs.semantic-release.outputs.new_release_version }}**
         ---
         # 📝 **Release Notes:** 
            ${{ needs.semantic-release.outputs.changelog_diff }}
         ---
         # 🔗 **JIRA IDs**
-        ${{ needs.semantic-release.outputs.jira_ids }}
+        ${{ needs.extract-jira.outputs.jira_ids }}
 
     secrets:
       TEAMS_WEBHOOK: ${{ secrets.TEAMS_WEBHOOK }}
