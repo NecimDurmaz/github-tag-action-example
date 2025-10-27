@@ -61,6 +61,20 @@ jobs:
             @semantic-release/exec@7
             @semantic-release/github@11
             @semantic-release/npm@12
+          branches: |
+            [
+              'master',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
+            ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
