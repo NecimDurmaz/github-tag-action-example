@@ -1,3 +1,10 @@
+# [4.78.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.77.0...v4.78.0) (2025-10-27)
+
+
+### Features
+
+* enhance JIRA ID extraction step with detailed logging and formatting ([e76d28f](https://github.com/NecimDurmaz/github-tag-action-example/commit/e76d28fb652ba158cd014756ece7622d772866a8))
+
 # [4.77.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.76.0...v4.77.0) (2025-10-27)
 
 
