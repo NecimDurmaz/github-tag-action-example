@@ -2,7 +2,7 @@
 name: Notify Teams
 
 on:
-  workflow_call: # <-- Bu satır reusable workflow için şart
+  workflow_call:
 
 jobs:
   notify:
