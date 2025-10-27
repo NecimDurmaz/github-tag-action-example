@@ -20,19 +20,63 @@ jobs:
         id: extract_jira
         run: |
           set -euo pipefail
+          
+          echo "=========================================="
+          echo "🔍 JIRA ID Extraction Started"
+          echo "=========================================="
+          
           prev_tag=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+          echo "Previous tag: '$prev_tag'"
+          
           if [ -n "$prev_tag" ]; then
             range="$prev_tag..HEAD"
+            echo "Range: $range"
           else
             range="--max-count=200"
+            echo "No previous tag found. Using last 200 commits."
           fi
+          
+          echo ""
+          echo "=========================================="
+          echo "📋 Commit Log ($range)"
+          echo "=========================================="
+          git log $range --oneline --decorate
+          echo ""
+          
+          echo "=========================================="
+          echo "📝 Full Commit Messages"
+          echo "=========================================="
           commit_messages=$(git log $range --pretty=%B)
+          echo "$commit_messages"
+          echo ""
+          
+          echo "=========================================="
+          echo "🔎 Extracting JIRA IDs"
+          echo "=========================================="
           jira_ids=$(printf '%s' "$commit_messages" | grep -oE '\b[A-Z][A-Z0-9]+-[0-9]+\b' | sort -u)
+          
           if [ -n "$jira_ids" ]; then
+            echo "✅ Found JIRA IDs:"
+            echo "$jira_ids"
+            echo ""
+          
+            echo "=========================================="
+            echo "🔗 Formatting JIRA IDs as Markdown Links"
+            echo "=========================================="
             formatted_jiras=$(printf '%s\n' "$jira_ids" | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#' | paste -sd ', ')
+            echo "Formatted output:"
+            echo "$formatted_jiras"
+            echo ""
+          
             echo "jira_ids<<EOF" >> "$GITHUB_OUTPUT"
             echo "$formatted_jiras" >> "$GITHUB_OUTPUT"
             echo "EOF" >> "$GITHUB_OUTPUT"
           else
+            echo "⚠️ No JIRA IDs found."
             echo "jira_ids=" >> "$GITHUB_OUTPUT"
           fi
+          
+          echo ""
+          echo "=========================================="
+          echo "✅ Extraction Complete"
+          echo "=========================================="
