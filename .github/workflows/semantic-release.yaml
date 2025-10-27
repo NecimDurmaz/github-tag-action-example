@@ -63,7 +63,7 @@ jobs:
             @semantic-release/npm@12
           branches: |
             [
-              'master',
+              'master'
             ]
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
