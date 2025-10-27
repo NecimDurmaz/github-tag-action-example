@@ -1,3 +1,13 @@
+## [4.78.3](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.78.2...v4.78.3) (2025-10-27)
+
+
+### Bug Fixes
+
+* correct HTML structure for version display in main.ts ([358f2a1](https://github.com/NecimDurmaz/github-tag-action-example/commit/358f2a15b4b1d3091db83ee6579b466b70aa8358))
+* correct version display in main.ts ([cf7dc91](https://github.com/NecimDurmaz/github-tag-action-example/commit/cf7dc91d7b07bc9977380fbe9b7fdea7d310f61e))
+* format JIRA IDs as Markdown list in extract-jira.yaml ([840c4b0](https://github.com/NecimDurmaz/github-tag-action-example/commit/840c4b0700abe937505f7fcabfb7346ba775b368))
+* update step name for release debug information in semantic-release.yaml ([5b5a376](https://github.com/NecimDurmaz/github-tag-action-example/commit/5b5a3768821a827efea62da5b8b2349eb9303326))
+
 ## [4.78.2](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.78.1...v4.78.2) (2025-10-27)
 
 
