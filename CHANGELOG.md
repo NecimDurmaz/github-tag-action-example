@@ -1,3 +1,16 @@
+# [4.77.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.76.0...v4.77.0) (2025-10-27)
+
+
+### Bug Fixes
+
+* streamline JIRA ID extraction step by removing unnecessary output and comments ([194bdeb](https://github.com/NecimDurmaz/github-tag-action-example/commit/194bdebbca05efe2c37e4d3426e6b7998e7c57bb))
+
+
+### Features
+
+* add JIRA ID extraction step to release workflow ([aeb45c9](https://github.com/NecimDurmaz/github-tag-action-example/commit/aeb45c9027c46594064d59bf41a24276df6614c1))
+* add JIRA ID extraction workflow for improved release tracking ([6478e0e](https://github.com/NecimDurmaz/github-tag-action-example/commit/6478e0e50312fb2f077a85e1b01d70e2fc9839f8))
+
 # [4.76.0](https://github.com/NecimDurmaz/github-tag-action-example/compare/v4.75.0...v4.76.0) (2025-10-24)
 
 
