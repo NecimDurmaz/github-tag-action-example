@@ -63,7 +63,7 @@ jobs:
             echo "=========================================="
             echo "🔗 Formatting JIRA IDs as Markdown Links"
             echo "=========================================="
-            formatted_jiras=$(printf '%s\n' "$jira_ids" | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#[\1](https://elektrawebpms.atlassian.net/browse/\1)#' | paste -sd ', ')
+            formatted_jiras=$(printf '%s\n' "$jira_ids" | sed -E 's#^([A-Z][A-Z0-9]+-[0-9]+)$#- [\1](https://elektrawebpms.atlassian.net/browse/\1)#')
             echo "Formatted output:"
             echo "$formatted_jiras"
             echo ""
